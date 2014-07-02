@@ -1,0 +1,124 @@
+#!/usr/bin/python2
+
+import re, cgi, sys
+from logtailconf import *
+
+TARGET = None
+
+class Msg(object):
+  def __init__(self, timestamp, sender, text, action, server):
+    self.timestamp = timestamp
+    self.sender = sender
+    self.text = text.decode('utf-8')
+    self.action = action
+    self.server = server
+
+  def __str__(self):
+    return str((self.timestamp, self.sender, self.text))
+
+
+def get_lines():
+  global TARGET
+  filename, TARGET, num = sys.argv[1:]
+
+  TARGET = open(TARGET, 'w')
+  num = int(num)
+
+  with open(filename) as f:
+    lines = f.readlines()[-num:]
+    lines = map(str.strip, lines)
+  return lines
+
+
+def split_lines(ss):
+  res = []
+  for s in ss:
+    # Extract the timestamp
+    timestamp = s[:19]
+    s = s[20:]
+
+    # And the sender... can be an ACTION or a server message
+    action = False
+    server = False
+
+    if s.startswith('-!-'):
+      s = s[4:]
+      sender = ''
+      server = True
+    elif s.startswith('> * '):
+      s = s[4:]
+      sender, s = s.split(' ', 1)
+      action = True
+    elif s.startswith('< * '):
+      s = s[4:]
+      sender, s = s.split(' ', 1)
+      action = True
+    elif s.startswith('> '):
+      s = s[2:]
+      sender, s = s.split(' ', 1)
+    elif s.startswith('< '):
+      s = s[2:]
+      sender, s = s.split(' ', 1)
+
+    if '!' in sender:
+      sender = sender[:sender.find('!')]
+
+    if sender.endswith(':'):
+      sender = sender[:-1]
+
+    if server and '!' in s:
+      sender = s[:s.find('!')]
+      s = s.split(' ', 1)[1]
+
+    res.append(Msg(timestamp, sender, s, action, server))
+  return res
+
+
+def escape_html(ss):
+  for s in ss:
+    s.text = cgi.escape(s.text).encode('ascii', 'xmlcharrefreplace')
+
+
+def wrap_links(ss):
+  for s in ss:
+    s.text = re.sub(r'(http.?://[^ ]*)', r'<a href="\1">[link]</a>', s.text)
+
+
+def detect_addressing(ss):
+  for s in ss:
+    if '#aioc' in s.text and not s.server:
+      s.text = '<b>' + s.text + '</b>'
+    elif re.search(r'(.{2,4})\1\1', s.text):
+      s.text = '<b>' + s.text + '</b>'
+
+
+def printout(ss):
+  def nickhash(nick):
+    h = sum(map(ord, nick))
+    h %= len(COLOURS)
+    return h
+
+  print >> TARGET, PROLOGUE
+
+  for s in ss:
+    if s.action:
+      fmt = '<span class="timestamp">%s</span> <span class="action">* %s %s</span>'
+    elif s.server:
+      fmt = '<span class="timestamp">%s</span> <span class="server">!! %s %s</span>'
+    else:
+      colour = COLOURS[nickhash(s.sender)]
+      fmt = '<span class="timestamp">%s</span> <span class="nick" style="color: {colour}">&lt;%s&gt;</span> %s'
+      fmt = fmt.format(colour=colour)
+
+    fmt += '<br>'
+    print >> TARGET, fmt % (s.timestamp, s.sender, s.text)
+
+  print >> TARGET, EPILOGUE
+
+
+ss = get_lines()
+ss = split_lines(ss)
+escape_html(ss)
+wrap_links(ss)
+detect_addressing(ss)
+printout(ss)

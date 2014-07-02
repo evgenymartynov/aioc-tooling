@@ -1,0 +1,1000 @@
+01-07-2014 07:36:46 -!- Ed_code3!~email@static-64-223-46-239.prov.east.verizon.net has joined #aioc
+01-07-2014 07:39:06 -!- Ed_code2!~email@static-64-223-46-239.prov.east.verizon.net has quit [Ping timeout: 244 seconds]
+01-07-2014 07:43:32 -!- Junkbotbot is now known as Junkbot
+01-07-2014 07:49:12 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: With the AIO, can I use soemthing like a template I wrote earlier
+01-07-2014 07:51:38 -!- Ed_code2!~email@static-64-223-46-239.prov.east.verizon.net has joined #aioc
+01-07-2014 07:54:31 -!- Ed_code3!~email@static-64-223-46-239.prov.east.verizon.net has quit [Ping timeout: 264 seconds]
+01-07-2014 07:55:50 < espes___!~espes@205.185.120.132: gongy: http://orac.amt.edu.au/aio/rulebook.pdf
+01-07-2014 07:56:10 < espes___!~espes@205.185.120.132: Students may, if desired, use the following resources: [...] any documentation in electronic form, such as help ﬁles—this does not include electronic
+01-07-2014 07:56:17 < espes___!~espes@205.185.120.132: source code
+01-07-2014 07:57:15 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: espes___, Thank you, I just read that + very helpful!
+01-07-2014 07:57:19 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gongy: if you need a template to do IO or w/e, IO templates are supplied
+01-07-2014 07:57:31 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: IO is input output right?
+01-07-2014 07:58:02 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: It's just i'm worried I will have a mental blank, and I just wanna have my past solve dproblems on ausb
+01-07-2014 07:58:20 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: yep
+01-07-2014 07:58:29 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: Some algorithms I might forget, having them by my side is just reassuring
+01-07-2014 07:58:31 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: thanks guys
+01-07-2014 07:58:33 -!- Ed_code3!~email@static-64-223-46-239.prov.east.verizon.net has joined #aioc
+01-07-2014 07:58:40 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gongy: yeah, just print them out
+01-07-2014 07:59:00 -!- Lyucit!~Lukion@c114-76-231-168.farfl3.nsw.optusnet.com.au has joined #aioc
+01-07-2014 07:59:16 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: I used to bring printed stuff to AIOs in case I had bugs in my algorithm
+01-07-2014 07:59:21 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: Yeah, print it out
+01-07-2014 07:59:27 -!- tetrapus!~Lukion@c114-76-231-168.farfl3.nsw.optusnet.com.au has quit [Ping timeout: 240 seconds]
+01-07-2014 07:59:35 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: DpEpsilon, how does having the printed stuff help you with bugs tho?
+01-07-2014 08:00:03 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gongy: e.g. binary search, you often make stupid off-by-one errors
+01-07-2014 08:00:22 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: so I would bring some pseudo-code for a binary search
+01-07-2014 08:00:34 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: and that would make sure I didn't get stupid off-by-one errors
+01-07-2014 08:00:48 -!- Ed_code2!~email@static-64-223-46-239.prov.east.verizon.net has quit [Ping timeout: 244 seconds]
+01-07-2014 08:01:00 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: printed out is fine
+01-07-2014 08:01:03 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: if you bring source code on a USB
+01-07-2014 08:01:16 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I have developed skills over a lifetime that makes me a nightmare for people like you
+01-07-2014 08:01:25 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: D:
+01-07-2014 08:01:31 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: <3
+01-07-2014 08:01:45 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: I'm not sure what you can do to stop me bringing in a USB - not that I will do it, of coruse
+01-07-2014 08:01:52 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, you don't understand the reference, I assume
+01-07-2014 08:02:04 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: you assume correctly :P
+01-07-2014 08:02:07 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: https://www.youtube.com/watch?v=AP_aom1IgqI&feature=kp&t=5m40s
+01-07-2014 08:02:09 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: [hint: aken]
+01-07-2014 08:02:12 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: *taken
+01-07-2014 08:02:16 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: it's a quote from the Liam Neeson movie Taken
+01-07-2014 08:02:22 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: it's the one scene that literally everyone knows
+01-07-2014 08:02:44 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: surely it's "i possess" something or other
+01-07-2014 08:03:04 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: Junkbot, "I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you I don't have money. But what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me a nightmare for people like you. If you let my daughter go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find yo
+01-07-2014 08:03:04 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: u, and I will kill you. "
+01-07-2014 08:03:09 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: lol
+01-07-2014 08:03:12 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: "acquired"
+01-07-2014 08:03:13 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: ah
+01-07-2014 08:03:16 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: and I will kill yooooo
+01-07-2014 08:03:36 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, https://www.youtube.com/watch?v=KgmO32IdwuE
+01-07-2014 08:03:40 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: it's about the only important scene in the movie
+01-07-2014 08:04:11 < espes___!~espes@205.185.120.132: it's about the least terrible scene in the movie
+01-07-2014 08:04:30 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: gongy: from previous years, it is almost never a question of "how much do i know/have memorised", more about "can i work this out and code it without bugs"
+01-07-2014 08:04:41 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: espes___, the entire movie is trash
+01-07-2014 08:04:44 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: but so so good
+01-07-2014 08:04:45 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: Junkbot, yep
+01-07-2014 08:04:58 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: this is like, every movie i watch
+01-07-2014 08:05:00 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: :P
+01-07-2014 08:05:18 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: Junkbot, the thing is, as I've been doing past problems, etc., I find myself looking back to stuff I've already done to double check
+01-07-2014 08:05:44 < espes___!~espes@205.185.120.132: Junkbot: bgbnbigben: btw join my business
+01-07-2014 08:05:55 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: DpEpsilon, I've googled, but I'm not sure how pseudocode/ binary search helps you debug
+01-07-2014 08:06:05 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: espes___: have you figured what you're doing yet? :P
+01-07-2014 08:06:08 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: espes___, how are you taking over the world this time?
+01-07-2014 08:06:10 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: s/doing/providing/
+01-07-2014 08:06:13 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: ahahaha
+01-07-2014 08:06:14 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: +1
+01-07-2014 08:06:20 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, you've clearly not coded enough binary searches
+01-07-2014 08:06:21 < espes___!~espes@205.185.120.132: so this one is just scamming google
+01-07-2014 08:06:25 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: since you pretty much always fuck them up
+01-07-2014 08:06:25 < espes___!~espes@205.185.120.132: you pay me $120/yr
+01-07-2014 08:06:26 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: i'm guessing that's what he told everyone
+01-07-2014 08:06:34 < espes___!~espes@205.185.120.132: and you get a google account with unlimited storage
+01-07-2014 08:06:36 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: espes___, and in return I'll get $100,000,000,000 ?
+01-07-2014 08:06:52 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: and a free trip to meet his majesty, espes___ the prince of south africa
+01-07-2014 08:06:54 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: *nigeria
+01-07-2014 08:06:57 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: espes___, it does seem like a damn good deal
+01-07-2014 08:07:00 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: yep.
+01-07-2014 08:07:08 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, I haven't coded a single binary searhc :P
+01-07-2014 08:07:12 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: I don't know what one is yet
+01-07-2014 08:07:13 < espes___!~espes@205.185.120.132: https://support.google.com/a/answer/6034782
+01-07-2014 08:07:20 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, then you will understand the pain later on. :P
+01-07-2014 08:07:53 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: espes___: no cpu cycles? what a shame.
+01-07-2014 08:08:07 -!- Ed_code2!~email@static-64-223-46-239.prov.east.verizon.net has joined #aioc
+01-07-2014 08:08:26 < espes___!~espes@205.185.120.132: you'd make bank if permacoin becomes a thing :P
+01-07-2014 08:08:27 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: espes___: like, if you throw in an instance on google's thingymadoo
+01-07-2014 08:08:43 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, so as far as i understnad, binary search is just halve down your code to narrow down on a bug
+01-07-2014 08:08:48 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: I do that sometimes
+01-07-2014 08:08:51 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: *narrow down on a solution
+01-07-2014 08:08:54 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: oh dear
+01-07-2014 08:08:55 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: binary search is an algorithm.
+01-07-2014 08:08:58 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: not a way to debug.
+01-07-2014 08:09:03 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: fuck
+01-07-2014 08:09:04 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: oh dear
+01-07-2014 08:09:07 < espes___!~espes@205.185.120.132: Junkbot: uhh
+01-07-2014 08:09:11 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: what have #aioc done
+01-07-2014 08:09:14 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: oh dear.
+01-07-2014 08:09:21 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: D:
+01-07-2014 08:09:23 < Ed_code2!~email@static-64-223-46-239.prov.east.verizon.net: gongy: subtle :P
+01-07-2014 08:09:29 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: espes___: doesn't amazon give you stuff for that kind of money
+01-07-2014 08:09:36 < espes___!~espes@205.185.120.132: you get $500 cloud platform credit
+01-07-2014 08:09:47 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: espes___: what even is
+01-07-2014 08:09:48 < espes___!~espes@205.185.120.132: https://cloud.google.com/developers/starterpack/
+01-07-2014 08:10:00 < espes___!~espes@205.185.120.132: if you apply to that :P
+01-07-2014 08:10:06 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: wait wat
+01-07-2014 08:10:12 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: espes___: that wasn't on the link you sent
+01-07-2014 08:10:32 < espes___!~espes@205.185.120.132: it's not part of it
+01-07-2014 08:10:36 < espes___!~espes@205.185.120.132: just be persuasive :P
+01-07-2014 08:11:08 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: espes___: lol
+01-07-2014 08:11:18 -!- Ed_code3!~email@static-64-223-46-239.prov.east.verizon.net has quit [Ping timeout: 264 seconds]
+01-07-2014 08:11:34 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, that doesn't mean you can't use the same general technique to debug.
+01-07-2014 08:11:41 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: but in this instance everyone is talking about bsearch the algorithm.
+01-07-2014 08:11:42 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: not anything else.
+01-07-2014 08:12:42 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: can you explain bsearching an alg?
+01-07-2014 08:12:52 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: sorry wikipedia isn't helping
+01-07-2014 08:13:26 -!- Ed_code3!~email@static-64-223-46-239.prov.east.verizon.net has joined #aioc
+01-07-2014 08:13:38 < Ed_code3!~email@static-64-223-46-239.prov.east.verizon.net: should I be worried about my internet right now?
+01-07-2014 08:16:18 -!- Ed_code2!~email@static-64-223-46-239.prov.east.verizon.net has quit [Ping timeout: 244 seconds]
+01-07-2014 08:16:47 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: try http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=binarySearch ? topcoder is usually pretty good
+01-07-2014 08:17:03 < espes___!~espes@205.185.120.132: what happened to the orac wiki?
+01-07-2014 08:17:09 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, yeah thanks
+01-07-2014 08:17:20 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: espes___, spambots.
+01-07-2014 08:17:25 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: espes___, I can't work out how to fix it properly.
+01-07-2014 08:17:32 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I've updated moin so it doesn't contain the CVE
+01-07-2014 08:17:45 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: but with enough hits it still pegs cpu
+01-07-2014 08:18:21 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, that link is about 19823740812734981324987134 times more in-depth than I would go.
+01-07-2014 08:18:30 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: so it's pretty good.
+01-07-2014 08:19:44 < espes___!~espes@205.185.120.132: bgbnbigben: Junkbot: so wanna join my buisiness
+01-07-2014 08:19:58 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I legit have no idea what it does, aside from seem incredibly dodgy. :P
+01-07-2014 08:20:19 < espes___!~espes@205.185.120.132: bgbnbigben: https://support.google.com/a/answer/6034782
+01-07-2014 08:21:52 < auscompgeek!aucg@firefox/community/auscompgeek: what domain are you planning to use anyway?
+01-07-2014 08:21:59 < espes___!~espes@205.185.120.132: pequalsnp.com I guess
+01-07-2014 08:22:02 < espes___!~espes@205.185.120.132: since that's already set up
+01-07-2014 08:22:07 < espes___!~espes@205.185.120.132: so you get xyz@pequalsnp.com
+01-07-2014 08:30:05 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: I would totally be in, but too bad my upload speed is horrendous
+01-07-2014 08:30:14 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: 0.5 mbps
+01-07-2014 08:31:04 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, dat key mash
+01-07-2014 08:31:17 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: mhmm
+01-07-2014 08:31:19 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, so at the end of the day, in that link you gave me
+01-07-2014 08:31:29 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: the dog is trying to lick my face argh.
+01-07-2014 08:31:31 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: it is just a special way to search an array trough
+01-07-2014 08:32:37 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, it's a general technique though.
+01-07-2014 08:32:49 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: like, yes, in that link the example is searching through a pre-sorted array.
+01-07-2014 08:33:13 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: but it goes on with things like "What we can call the main theorem states that binary search can be used if and only if for all x in S, p(x) implies p(y) for all y > x. "
+01-07-2014 08:33:42 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: it's why e.g. binary search trees make sense and various other data structures.
+01-07-2014 08:33:56 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: when I say "it's why", I mean "it's why in a relatively straightforward, natural way"
+01-07-2014 08:34:36 -!- AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au has joined #aioc
+01-07-2014 08:35:18 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, yeah, so the predicate in the most basic example
+01-07-2014 08:35:28 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: is just 'is this number greater than or equal to 55'
+01-07-2014 08:35:57 -!- Ed_code3!~email@static-64-223-46-239.prov.east.verizon.net has quit [Remote host closed the connection]
+01-07-2014 08:36:13 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: right, yeah.
+01-07-2014 08:36:21 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: but if you keep reading below the p(x) implies p(y) part
+01-07-2014 08:36:33 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: ^F for "One might wonder why we choose"
+01-07-2014 08:36:36 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: and read that paragraph.
+01-07-2014 08:38:27 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: not necessarily a criticism
+01-07-2014 08:38:38 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: but this is probably the most heavy handed way you could introduce binary search
+01-07-2014 08:38:49 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: well i'm assuming coding a binary search can get hard, seeing as DpEpsilon mentioned printing out pseudocode for it?
+01-07-2014 08:39:07 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: oh nah, it's just a common technique that you can't afford to get wrong
+01-07-2014 08:39:16 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: and one which if you aren't used to, is easy to get off by ones
+01-07-2014 08:39:21 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: or very slight infinite loops
+01-07-2014 08:39:40 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: the more advanced uses of binary search are amazing
+01-07-2014 08:40:02 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: AntiForest, yup, it is, but I'm also trying to write my own code so don't have time to just drop everything and teach bsearch. OTOH, this way, I figure gongy can ask questions here or there and I can answer them
+01-07-2014 08:40:05 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I can still remember how shocking it was when I first encountered them
+01-07-2014 08:40:08 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: which is slightly more efficient from a selfish point of view.
+01-07-2014 08:40:19 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: not selfish if this code is for the set
+01-07-2014 08:40:25 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: it's not :P
+01-07-2014 08:40:25 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: which it is...riggghhhttttttt?
+01-07-2014 08:40:28 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: :(
+01-07-2014 08:40:32 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I have solutions to all my set problems
+01-07-2014 08:40:39 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: erm is this aioc set?
+01-07-2014 08:40:43 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: just sledgehammering the data into an orac format is making me want to stab myself.
+01-07-2014 08:40:49 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: :(
+01-07-2014 08:40:51 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: that's what he was referring to by "the set", yes.
+01-07-2014 08:41:01 > epochfail: "i have solutions, but i'm bgbnbigben so they are using quadratic linear searches"
+01-07-2014 08:41:03 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: i hope its not too undoable
+01-07-2014 08:41:10 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: epochfail, :(
+01-07-2014 08:41:12 > epochfail: bgbnbigben: <3
+01-07-2014 08:41:16 > epochfail: bgbnbigben: good times
+01-07-2014 08:41:25 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: AntiForest, pls dnt underestimate me :'
+01-07-2014 08:41:27 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: :'(
+01-07-2014 08:41:31 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, I hate to be brutal, but you will utterly struggle with this set.
+01-07-2014 08:41:41 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: lol
+01-07-2014 08:41:41 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: gongy, I'm not
+01-07-2014 08:41:55 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I'm aiming to make it hard for people who've been to n >= 1 IOI.
+01-07-2014 08:42:20 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: because the idea is they'll *eventually* solve all these problems.
+01-07-2014 08:42:25 > epochfail: gongy: so if you haven't read the binsearch article yet, think about how you'd check if a number X is in a *sorted* array
+01-07-2014 08:42:36 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: and others who've also been trying for ages will then be able to ask for help and hints and stuff.
+01-07-2014 08:42:50 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: if you like the abstraction and more mathematical language then sure
+01-07-2014 08:43:13 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: but for someone who's only been doing informatics for a month or so, you probably won't have anywhere near the required amount of informatics toolkit.
+01-07-2014 08:43:15 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: just from experience, a lot of people get confused and don't really appreciate the beauty of a technique by just throwing that at them
+01-07-2014 08:43:16 > epochfail: gongy: now do the same if you can only look at 25 cells of the array and the array has 1,000,000 items
+01-07-2014 08:43:43 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: well O(log base 2 n) is pretty sweet stuff
+01-07-2014 08:43:54 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: for orders
+01-07-2014 08:43:55 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: wait
+01-07-2014 08:43:58 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: base is irrelevant
+01-07-2014 08:43:58 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: is it...
+01-07-2014 08:44:03 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: ok
+01-07-2014 08:44:20 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: surely it's relevant for logs
+01-07-2014 08:44:27 > epochfail: gongy: for logarithms, they are all roughly proportional
+01-07-2014 08:44:34 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: oh
+01-07-2014 08:44:38 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: lolz
+01-07-2014 08:44:38 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gongy: It's not hard conceptually, but if you're not used to it, you can code it up wrong and it's difficult to debug.
+01-07-2014 08:44:51 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: log (base k) N = log N/log k so it's just a constant factor
+01-07-2014 08:44:52 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: DpEpsilon, yep, AntiForest said
+01-07-2014 08:44:56 > epochfail: gongy: you can convert from log_base_x to log_base_y by dividing by a number -- tehy are like y=x and y=2x in a sense.
+01-07-2014 08:45:00 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: AntiForest, yeah i just did the maths in my head retarded
+01-07-2014 08:45:02 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: same thing as any others, unless it's absurd, there's no point
+01-07-2014 08:45:25 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: woops - epochfail ^^
+01-07-2014 08:45:25 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: mmm, ok
+01-07-2014 08:45:40 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: it's still useful to assume base 2 for calculations
+01-07-2014 08:46:10 > epochfail: ^ powers of 2 become one thing that you remember off the top of your head... powers of 10 are much harder: (
+01-07-2014 08:46:14 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: epochfail, 2^25 > 1000000. and i understand bsearch. so yay
+01-07-2014 08:46:21 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: epochfail, lol
+01-07-2014 08:46:21 > epochfail: gongy: now code it!
+01-07-2014 08:46:28 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: oh ffs ok
+01-07-2014 08:46:30 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: :P
+01-07-2014 08:46:51 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, if you want a specific bsearch problem, I can give you one
+01-07-2014 08:46:55 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: holy shit, powers of 10 way too hard
+01-07-2014 08:47:03 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I don't know if there are any public problems with an obvious bsearch algo.
+01-07-2014 08:47:04 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I still have difficulty reading stuff in sig fig form
+01-07-2014 08:47:05 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, thanks, that'd be nice actually
+01-07-2014 08:47:15 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: whereas Bernards Magic Needles is literally written as "implement bsearch"
+01-07-2014 08:47:16 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, not too hard tho, just one i can see where it's pointing me to
+01-07-2014 08:47:29 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: AntiForest, bro have you even practiced typing them
+01-07-2014 08:47:32 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, no, this is the "I've never written a bsearch before" problem.
+01-07-2014 08:47:44 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I need space bars to make sure I don't make mistakes
+01-07-2014 08:47:48 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I have to spacebar every 3
+01-07-2014 08:48:01 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: AntiForest, I go for the very slow and counting in my head apporach
+01-07-2014 08:48:06 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: makes t hem harder to read for others :D
+01-07-2014 08:48:30 > epochfail: AntiForest: protip: const int INF = 1e9;
+01-07-2014 08:48:37 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: +5
+01-07-2014 08:48:42 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: always need that +5 JUST in case
+01-07-2014 08:48:50 > epochfail: AntiForest: but it's an infinity!
+01-07-2014 08:48:54 > epochfail: AntiForest: inf + 5 = inf
+01-07-2014 08:49:35 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I also have all my array sizes end with +5
+01-07-2014 08:49:37 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: JUST in case
+01-07-2014 08:49:43 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: even when it's 100 times the necessary magnitude
+01-07-2014 08:50:07 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bro
+01-07-2014 08:50:08 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, you now have Algorithmic Complexity 2013 December, which has Bernards Magic Needles.
+01-07-2014 08:50:15 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: as well as a bunch of other public problems, I think.
+01-07-2014 08:50:35 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: OMG OMGOMGOMGOMG
+01-07-2014 08:50:41 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: my first non-public problem
+01-07-2014 08:50:47 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: my eyes are watering thanks bgbnbigben 
+01-07-2014 08:50:55 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: haven't unlocked any sets?
+01-07-2014 08:51:00 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I think all the unlocks are non public as well
+01-07-2014 08:51:15 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: wtf how are these problems not public? they should be public since they're obvious demonstrations of useful techniques.
+01-07-2014 08:51:19 < * bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au shakes head
+01-07-2014 08:51:23 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: whatever. not my problem.
+01-07-2014 08:51:48 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: AntiForest, no unlocks, challenge sets 2 hard 4 me
+01-07-2014 08:52:06 -!- sarahcat!~notsarah@unaffiliated/notsarah has quit [Ping timeout: 264 seconds]
+01-07-2014 08:52:43 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: there are other unlocks
+01-07-2014 08:55:46 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: AntiForest, like? i have challenge ones, and harder aio/aic problems
+01-07-2014 08:56:06 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: yeah the latter
+01-07-2014 08:56:08 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, surely just iterating through the array wouldn't time out?
+01-07-2014 08:56:15 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, try it and see
+01-07-2014 08:56:17 < amoebius!~amoebius@ec2-54-86-85-13.compute-1.amazonaws.com: bgbnbigben, some part of you wants to make it your problem >:C
+01-07-2014 08:56:18 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: just note: I have no idea what your progress is
+01-07-2014 08:56:29 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: gongy, do complexity
+01-07-2014 08:56:36 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: it's in complexity analysis isn't it?
+01-07-2014 08:56:44 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: amoebius, pretty sure deciding whether or not we make non-public problems public is entirely jaz's problem.
+01-07-2014 08:57:03 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: AntiForest, no :(
+01-07-2014 08:57:19 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: yes it is -- it's in AC
+01-07-2014 09:00:46 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: noooo
+01-07-2014 09:00:48 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: misuse of AC
+01-07-2014 09:00:51 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: noooooo
+01-07-2014 09:00:58 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: Junkbot, wat?
+01-07-2014 09:01:11 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: AC is accepted.
+01-07-2014 09:01:17 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: lol.
+01-07-2014 09:01:20 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: you do too much acm
+01-07-2014 09:01:23 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: ACm
+01-07-2014 09:01:28 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: *AC*m
+01-07-2014 09:02:20 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I think this year it would have been better named WAM world finals
+01-07-2014 09:03:17 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: see it all makes sense
+01-07-2014 09:03:19 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: ACM
+01-07-2014 09:03:20 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: WAM
+01-07-2014 09:03:28 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: dude, they're all university related!
+01-07-2014 09:03:45 < amoebius!~amoebius@ec2-54-86-85-13.compute-1.amazonaws.com: bgbnbigben, what I mean is that we have very few teaching-related public problems =P
+01-07-2014 09:03:59 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: amoebius, all kinds of fuck that.
+01-07-2014 09:04:19 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: amoebius, even when I have problems and data written for me turning them into orac problems is nontrivial.
+01-07-2014 09:04:22 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: amoebius, the more obscure we are the more valuable
+01-07-2014 09:05:30 < amoebius!~amoebius@ec2-54-86-85-13.compute-1.amazonaws.com: AntiForest, hm, true
+01-07-2014 09:05:56 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, i don't have complexity in ac
+01-07-2014 09:06:08 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, the set is called Algorithmic Complexity, no?
+01-07-2014 09:06:20 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: yep
+01-07-2014 09:06:23 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: 2013 dec
+01-07-2014 09:06:33 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: when AntiForest says "do complexity", he means "analyse the complexity of your approach"
+01-07-2014 09:06:43 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: lol i thought it was a problem
+01-07-2014 09:06:55 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: i never heard of 'doing complexity' lol
+01-07-2014 09:06:56 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: :P
+01-07-2014 09:09:26 -!- sarahcat!~notsarah@unaffiliated/notsarah has joined #aioc
+01-07-2014 09:09:30 -!- sarahcat!~notsarah@unaffiliated/notsarah has quit [Remote host closed the connection]
+01-07-2014 09:09:32 -!- gongy is now known as gongy[afk_dinner
+01-07-2014 09:36:02 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: so, #aioc. I apparently have a free trip to China. what are things to do there?
+01-07-2014 09:36:35 < espes___!~espes@205.185.120.132: get lung cancer
+01-07-2014 09:36:58 < jesse!~jesse@unaffiliated/jesse: search the internet for ways to destroy the communist party
+01-07-2014 09:37:22 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: espes___, no no, that's the reason my mother is there in the first place and why I'm getting a free trip.
+01-07-2014 09:37:33 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: espes___, pretty sure she'd be pissed off if I joined in on the party.
+01-07-2014 09:38:30 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: o.o
+01-07-2014 09:38:33 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: wait why and what
+01-07-2014 09:38:40 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: AntiForest, to which part?
+01-07-2014 09:38:41 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: plan to see the great wall of china
+01-07-2014 09:38:43 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: plan to meet locals
+01-07-2014 09:38:53 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: then get stuck in your room for a week cause the smog is making you insanely dizzy
+01-07-2014 09:38:54 < jesse!~jesse@unaffiliated/jesse: s/wall/firewall/
+01-07-2014 09:38:58 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: that's what I remember of my trip
+01-07-2014 09:39:12 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: AntiForest, so I'll *probably* only be there a week, from the looks of things
+01-07-2014 09:39:23 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: awesome, just the right time frame!
+01-07-2014 09:39:33 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: any more and you might actually get used to it
+01-07-2014 09:39:39 < * bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au laughs
+01-07-2014 09:39:42 < jesse!~jesse@unaffiliated/jesse: AntiForest: my dad had respiratory problems for like a month after he came back :(
+01-07-2014 09:39:52 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: yeah it's actually pretty bad
+01-07-2014 09:39:56 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnbigben, where abouts in china?
+01-07-2014 09:40:07 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: fortunately got better once we weren't in shanghai anymore
+01-07-2014 09:40:17 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, part of it will be in Guangzhou, which is where my folks are, but in theory anywhere.
+01-07-2014 09:40:40 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: right
+01-07-2014 09:40:42 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: uh
+01-07-2014 09:40:46 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: china's a pretty big place
+01-07-2014 09:41:15 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: correct.
+01-07-2014 09:41:17 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: you have family living in china?
+01-07-2014 09:41:26 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: AntiForest, didn't you know? He's chinese
+01-07-2014 09:41:30 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I suppose I could go to Macau
+01-07-2014 09:41:41 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: AntiForest, when I said my mother has lung cancer, I wasn't kidding.
+01-07-2014 09:41:55 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: AntiForest, she's been there since ~the start of March getting an unvetted blah blah treatment.
+01-07-2014 09:41:56 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: dahlukeh, oh right, all informaticians are chinese
+01-07-2014 09:42:04 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: oooh I could go to hk too.
+01-07-2014 09:42:09 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: o.o
+01-07-2014 09:42:41 < jesse!~jesse@unaffiliated/jesse: bgbnbigben: depends on your visa, if you go to hk before/after the mainland segment you should be fine i guess
+01-07-2014 09:42:57 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: jesse, yeah, though I'm only there for a week so it should be legit.
+01-07-2014 09:44:14 < jesse!~jesse@unaffiliated/jesse: although i hear the smog from the mainland is drifting into hk
+01-07-2014 09:44:31 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: AntiForest, this is the reason epochfail and I have been joking for months about my brother burning the house down -- it has just been Alex and I at home
+01-07-2014 09:44:56 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: in retrospect that makes a lot of small things make way more sense
+01-07-2014 09:45:04 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I'm assuming work related stay in china?
+01-07-2014 09:45:16 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: AntiForest, hmm?
+01-07-2014 09:46:43 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: wait is your mother in china just for lung treatment?
+01-07-2014 09:47:00 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: yup.
+01-07-2014 09:47:25 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: like, mum has cancer in her lungs and spine -- it's a pretty terminal cancer.
+01-07-2014 09:47:57 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: so she's been there in an attempt to prolong the death part of terminal cancer.
+01-07-2014 09:48:05 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: err, prolong the living part of terminal cancer, that should be.
+01-07-2014 09:48:08 < jesse!~jesse@unaffiliated/jesse: spine hmm...confined to a wheelchair?
+01-07-2014 09:48:40 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: mum? no, she can walk.
+01-07-2014 09:48:53 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: it compressed a couple of vertabrae, but other than that.
+01-07-2014 09:52:45 -!- gongy[afk_dinner is now known as gongy
+01-07-2014 09:52:51 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, omg that's so sad i'm so sorry
+01-07-2014 09:52:58 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnbigben, if you don't mind me asking, what is the treatment hoping to do?
+01-07-2014 09:52:59 < * bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au shrugs
+01-07-2014 09:53:21 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, mum's had this since about feb last year, so it's not like it's new news to me.
+01-07-2014 09:53:26 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, does she smoke, and do you?
+01-07-2014 09:53:28 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, it depends who you ask. :P
+01-07-2014 09:53:30 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, no/no.
+01-07-2014 09:53:32 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: uhm
+01-07-2014 09:53:34 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: the doctors?
+01-07-2014 09:53:36 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, it's metastatic breast cancer from when she had breast cancer 10 years ago.
+01-07-2014 09:53:38 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: 'doctors'?
+01-07-2014 09:53:40 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, doesn't change my question. :P
+01-07-2014 09:53:45 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: ok
+01-07-2014 09:53:47 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, so she's hoping it'll cure her cancer.
+01-07-2014 09:53:47 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: her
+01-07-2014 09:53:52 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yup
+01-07-2014 09:53:56 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: do you know what they are doing>
+01-07-2014 09:54:17 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: everyone else figures it'll prolong things; it's metastatic and doesn't have any standard markers, so you can't really tell whether or not it's gone or still there.
+01-07-2014 09:54:21 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: she went to china just for treatment?
+01-07-2014 09:54:34 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I'm assuming the delay here would be pretty bad
+01-07-2014 09:54:38 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, it's called spdt -- they inject her with this drug that's sensitive to some kind of IR light
+01-07-2014 09:54:47 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: or UV waves, or both
+01-07-2014 09:54:50 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: hmmmm
+01-07-2014 09:54:55 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: probably rather expensive and insurance might not be cheap if you're already in a bad situation
+01-07-2014 09:55:03 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: and then use IR light or UV to "activate" and kill shit
+01-07-2014 09:55:07 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: right
+01-07-2014 09:55:08 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: in a slightly more targeted way than chemo.
+01-07-2014 09:55:10 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: that kinda makes sense
+01-07-2014 09:55:11 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yeah
+01-07-2014 09:55:14 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, yes.
+01-07-2014 09:55:14 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: that's what I'm thinking
+01-07-2014 09:55:48 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, right, except most western countries have rejected it as a form of treatment because of a complete lack of efficacy
+01-07-2014 09:56:01 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: AntiForest, mum can't get insurance anymore. :p
+01-07-2014 09:56:34 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: :(
+01-07-2014 09:56:54 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: :S that's rather shitty
+01-07-2014 09:57:00 < * bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au shrugs
+01-07-2014 09:57:02 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: c'est la vie.
+01-07-2014 09:58:09 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: there's a strange lack of info regarding it online
+01-07-2014 09:58:19 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: sono photo dynamic therapy?
+01-07-2014 09:58:43 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: y
+01-07-2014 09:59:19 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, regarding what to do, there really isn't much
+01-07-2014 09:59:24 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: it's particularly effective for surface cancers like tongue/etc, where the skin is pretty thin
+01-07-2014 09:59:30 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: but your lungs are a pretty long way into your body.
+01-07-2014 10:00:08 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, ?
+01-07-2014 10:00:46 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: well where are you going exactly?
+01-07-2014 10:01:30 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, Guangzhou is likely where I'd end up first.
+01-07-2014 10:01:37 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: which is next door to HK/Macau
+01-07-2014 10:01:42 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: so I can go gambling, I guess. :P
+01-07-2014 10:01:45 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: lol
+01-07-2014 10:02:00 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: you can gamble in australia can't you
+01-07-2014 10:02:11 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: apparently Yangshuo is nice.
+01-07-2014 10:02:25 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, the joke is that Macau is like the second-largest gambling hub in the world, behind Las Vegas
+01-07-2014 10:02:30 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: and it's quite possible at this point that it's overtaken LV.
+01-07-2014 10:02:35 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: ah i see
+01-07-2014 10:17:03 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, Thanks so much for the links and the problem - I got bernard first try :P
+01-07-2014 10:17:09 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: :D
+01-07-2014 10:17:14 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: did you work out why linear scans won't work?
+01-07-2014 10:18:48 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: time-out, right?
+01-07-2014 10:19:05 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, this solution didn't even use binary, unless it's part of the map stl, http://orac.amt.edu.au/cgi-bin/train/view_submission.pl?problemid=134&user=2022
+01-07-2014 10:19:19 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, why? like, what's the time complexity that'll cause it to time out?
+01-07-2014 10:19:24 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: N
+01-07-2014 10:19:28 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: O(N)
+01-07-2014 10:19:31 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: Sorry nope
+01-07-2014 10:19:44 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: also yes, the stl map (and set) is implemented as a rb_tree, which is a balanced binary tree.
+01-07-2014 10:19:56 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: ahhh, stl = easy way out :P
+01-07-2014 10:20:06 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: mhmm
+01-07-2014 10:20:13 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: Haystack size times needle count
+01-07-2014 10:20:15 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: so the complexity of the linear scan solution is O(N)?
+01-07-2014 10:20:17 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: right, yeah
+01-07-2014 10:20:19 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: O(M*N) or whatever.
+01-07-2014 10:20:37 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: that's like 1 billion
+01-07-2014 10:20:47 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: so 0.2 second time limit is overkill already :P
+01-07-2014 10:21:12 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, what is the complexity of a sort?
+01-07-2014 10:21:23 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: what kind of sort?
+01-07-2014 10:22:19 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: oh there's more than one - that's why i have differnet answers
+01-07-2014 10:22:31 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: the one i use? um its...
+01-07-2014 10:22:34 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: the one in algorithm
+01-07-2014 10:22:57 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: Sorry I found my own answer, now i realised
+01-07-2014 10:23:37 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, sorting is O(n log(n)) so if the array isn't sorted in the first place, using a bsearch is pointless right?
+01-07-2014 10:23:57 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: well, because I linked you to the predicate definition, let's go back to that.
+01-07-2014 10:24:09 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: the whole point of the predicate was p(x) implies p(y) if x > y, right?
+01-07-2014 10:24:19 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: i.e. "this number is greater than 50" or whatever
+01-07-2014 10:24:35 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: err, x < y, whoops.
+01-07-2014 10:24:40 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: yeah
+01-07-2014 10:24:46 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: Sorry to interrput
+01-07-2014 10:24:47 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: if x = 52, then you're saying "right, now any number to my right is larger than me"
+01-07-2014 10:24:57 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: if the array is unsorted, that's a bullshit guarantee.
+01-07-2014 10:25:00 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: yep
+01-07-2014 10:25:06 > epochfail: kennyboy: do i make you happy? 
+01-07-2014 10:25:18 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: it does acknoledge it needs a sort
+01-07-2014 10:25:19 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: The overall complexity of the solution is O(n log SIZE), where SIZE is the size of the search space. This is very fast. 
+01-07-2014 10:26:07 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: right, but ignoring that topcoder page and just using the notion of predicates you can logic it out that way
+01-07-2014 10:26:47 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: of course
+01-07-2014 10:28:16 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: epochfail: ?
+01-07-2014 10:29:17 > epochfail: kennyboy: don't you love me?
+01-07-2014 10:29:37 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: epochfail: ?
+01-07-2014 10:30:44 > epochfail: kennyboy: </3
+01-07-2014 10:31:03 > epochfail: kennyboy: when you see it, you will shit rainbows
+01-07-2014 10:32:37 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, I've just re-read my maths camp invites and it doesn't say anything about stopping me from going to December info and April Maths
+01-07-2014 10:32:53 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: I just wanna make sure-  Devin went to 2013 december right?
+01-07-2014 10:32:53 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, the invite might not say so, but it's a policy that exists.
+01-07-2014 10:32:59 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: oh dammit
+01-07-2014 10:33:07 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: yes, but I don't believe he went to april 2014 maths?
+01-07-2014 10:33:11 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: yep he did
+01-07-2014 10:33:27 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: really? I was under the impression if you started a year in one system you were stuck with it.
+01-07-2014 10:33:34 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: yeah like Jerry
+01-07-2014 10:33:41 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: Junkbot ^ ?
+01-07-2014 10:34:06 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au:  I was under the impression that if you went to a December, you had to go to the April of the same one
+01-07-2014 10:34:08 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: perhaps Angelo didn't realise or something.
+01-07-2014 10:34:13 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: lol
+01-07-2014 10:34:39 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: (it is Angelo, right?)
+01-07-2014 10:34:42 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: yes
+01-07-2014 10:34:56 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: epochfail: i am terribly confused
+01-07-2014 10:38:41 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: that's also what I've heard
+01-07-2014 10:41:48 < * gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au cries a river
+01-07-2014 10:42:06 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: epochfail, how much of a Make boss are you?
+01-07-2014 10:42:11 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: #aioc ^
+01-07-2014 10:42:13 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: no harm in asking right?
+01-07-2014 10:42:18 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: eh...
+01-07-2014 10:42:37 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: I would feel really bad because at April debriefing I said I didn't wanna do any other camps
+01-07-2014 10:43:00 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, come to the dark side
+01-07-2014 10:43:06 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: also that's obviously contingent on you getting invited to december.
+01-07-2014 10:43:09 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I would perhaps worry about it then.
+01-07-2014 10:43:22 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: decide whether you'll have a better chance of making a team, if that's what you're going for.
+01-07-2014 10:43:31 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: otherwise, decide if you'd prefer the diversity
+01-07-2014 10:43:32 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: or etc.
+01-07-2014 10:43:38 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: yeah...
+01-07-2014 10:43:43 > epochfail: bgbnbigben: knowing your makefiles... i will be powerless. what do you want to do?
+01-07-2014 10:43:57 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: I don't think I will make the IOI but I want to do it for learning
+01-07-2014 10:44:08 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: from what Junkbot told me
+01-07-2014 10:44:15 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: epochfail, so I'm recursively finding all .cpp files, and I want to compile build/filename.o from some/dir/structure/filename.cpp
+01-07-2014 10:44:19 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: I am hoping to at least make yr12 imo and possible year 11
+01-07-2014 10:44:20 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: the reason it was implemented was someone made a team then late cancelled to hope to make another team
+01-07-2014 10:44:21 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: gongy, then eh. :P
+01-07-2014 10:44:33 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: epochfail, I can do the recursive find correctly
+01-07-2014 10:44:34 > epochfail: bgbnbigben: good luck :P
+01-07-2014 10:44:40 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: epochfail: what am i looking for, wtf?
+01-07-2014 10:44:41 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: but when I define the build/%.o rule
+01-07-2014 10:44:45 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: AntiForest, that's pretty shitty of them
+01-07-2014 10:44:46 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: : %.cpp %.h doesn't cut it
+01-07-2014 10:44:51 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: because it expects things in the current dir.
+01-07-2014 10:45:01 > epochfail: kennyboy: check scrollback
+01-07-2014 10:45:16 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: not offending anyone though... if they are here...
+01-07-2014 10:45:16 > epochfail: bgbnbigben: yeah.
+01-07-2014 10:45:17 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: someone might want to confirm that story first
+01-07-2014 10:45:18 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: epochfail: :O
+01-07-2014 10:45:33 > epochfail: bgbnbigben: i know what you're trying to do and why it's not working
+01-07-2014 10:45:35 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I could vpath but that seems fucked.
+01-07-2014 10:45:42 > epochfail: bgbnbigben: and i have no idea how one can do that
+01-07-2014 10:45:47 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: sure
+01-07-2014 10:45:52 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I can imagine it being an extremely hard choice though
+01-07-2014 10:46:15 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: AntiForest, yep, but as bgbnbigben pointed out... it is all contingent on me making EITHER of the camps in the first place
+01-07-2014 10:46:27 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: nek minnut - don't make either
+01-07-2014 10:46:29 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: no, *both*
+01-07-2014 10:46:32 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: either is incorrect. :P
+01-07-2014 10:46:35 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: if you make math but not info
+01-07-2014 10:46:39 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: you don't have to worry about a choice
+01-07-2014 10:46:44 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: if you make info but not math, see previous
+01-07-2014 10:47:59 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: fuck it, I'll use vpath.
+01-07-2014 10:48:41 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: epochfail, for reference: PATHS:=$(sort $(dir ${SOURCES}) \n vpath %.cpp ${PATHS}
+01-07-2014 10:49:00 > epochfail: bgbnbigben: you're a terrible person
+01-07-2014 10:49:08 > epochfail: bgbnbigben: :)
+01-07-2014 10:49:14 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: :D
+01-07-2014 10:49:23 > epochfail: bgbnbigben: you are also pink.
+01-07-2014 10:57:51 -!- AbyssMaul!~AbyssMaul@101.174.61.207 has joined #aioc
+01-07-2014 10:58:08 -!- AbyssMaul is now known as AbishForester
+01-07-2014 10:58:56 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: can... we not?
+01-07-2014 10:59:59 > epochfail: bgbnbigben: what? it's random, i swear! http://epochfail.com/aioc
+01-07-2014 11:00:25 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: WOAH HOLY CRAP
+01-07-2014 11:00:27 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: colours
+01-07-2014 11:00:35 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I see a lot of pink
+01-07-2014 11:01:33 > epochfail: bgbnbigben: kennyboy dahlukeh SPL
+01-07-2014 11:01:58 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: whoa, ty.
+01-07-2014 11:02:18 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: hahahaha
+01-07-2014 11:06:13 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: don't believe your stuck with it
+01-07-2014 11:06:21 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: [off the top of my head]
+01-07-2014 11:06:23 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: oh
+01-07-2014 11:06:24 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: lol
+01-07-2014 11:06:31 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: or maybe you are
+01-07-2014 11:06:35 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: [reading scrollback]
+01-07-2014 11:06:38 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: xD
+01-07-2014 11:07:23 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: gongy, so the important thing is
+01-07-2014 11:07:27 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: the answer is a boolean
+01-07-2014 11:07:31 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: yay, progress
+01-07-2014 11:07:38 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: AntiForest: i think i was relating the harry slatyer story; got invited to chem summer school then did seln exam, offered a spot on the IChO team, turned it down, went to april, made IOI team [in that order, which makes it a gamble and very special]
+01-07-2014 11:07:47 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: oh
+01-07-2014 11:07:52 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I remember it being Ipho
+01-07-2014 11:07:55 > epochfail: Junkbot: slatyer is why we have that rule, i think
+01-07-2014 11:08:19 > epochfail: Junkbot: in my memory, we don't *like* it when you do >1 thing a year
+01-07-2014 11:08:31 < ishraq!~ishraq@d220-237-41-210.mas801.nsw.optusnet.com.au: owaah colours
+01-07-2014 11:08:34 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: erm per year, or per financial year
+01-07-2014 11:08:53 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: dammit can't unsee colours
+01-07-2014 11:08:54 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: per season.
+01-07-2014 11:08:56 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: either way your plan isn't looking good?
+01-07-2014 11:08:57 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: like, informatics season
+01-07-2014 11:09:02 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: "cycle"
+01-07-2014 11:09:12 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: epochfail: i'm happy with my xchat colour hashing
+01-07-2014 11:09:17 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: antiforest, yep
+01-07-2014 11:09:18 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: and mentally hash people to colours, too
+01-07-2014 11:09:19 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: so dec-april/july 
+01-07-2014 11:09:20 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: not so good
+01-07-2014 11:09:25 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: though honestly
+01-07-2014 11:09:26 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: ask
+01-07-2014 11:09:28 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: gongy: ^
+01-07-2014 11:09:29 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: there's really no harm
+01-07-2014 11:09:39 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: WHAT COLOUR AM I?
+01-07-2014 11:09:42 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: red
+01-07-2014 11:09:43 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: no one's going to seriously think you're a traitor
+01-07-2014 11:09:50 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: epochfail, this is buffering on low qualify, ffs twitch.
+01-07-2014 11:09:52 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: lol we think jerry is
+01-07-2014 11:10:07 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: What colour am i?
+01-07-2014 11:10:07 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: well I don't think anyone in admin/picking teams will
+01-07-2014 11:10:15 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I think colours are randomed per person?
+01-07-2014 11:10:21 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I get dahlukeh as...something
+01-07-2014 11:10:26 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: it's a brownish yellow?
+01-07-2014 11:10:27 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: gold?
+01-07-2014 11:10:30 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: OII
+01-07-2014 11:10:33 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: *POO
+01-07-2014 11:10:39 > epochfail: dahlukeh: no you oi
+01-07-2014 11:10:43 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: I'm poo? :(
+01-07-2014 11:10:47 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: epochfail is gold
+01-07-2014 11:10:55 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, is red
+01-07-2014 11:11:00 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: you're green
+01-07-2014 11:11:02 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: gongy: i would recommend sitting both exams first
+01-07-2014 11:11:08 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: when you get invites, then ask
+01-07-2014 11:11:13 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: Junkbot, lolz ofc.
+01-07-2014 11:11:17 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: :)
+01-07-2014 11:11:22 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: i would sound like a prick assuming i would get in either
+01-07-2014 11:11:23 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: :P
+01-07-2014 11:11:30 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I'm pretty on mine :)
+01-07-2014 11:11:33 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: blue
+01-07-2014 11:11:37 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: you probably have decent shots
+01-07-2014 11:11:40 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I know you're good at maths
+01-07-2014 11:11:44 > epochfail: guys. this is just a colour. shut the fuck up.
+01-07-2014 11:11:47 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: and info we're losing like everyone soon
+01-07-2014 11:11:47 -!- AbyssMaul!~AbyssMaul@CPE-121-218-169-224.lnse4.cht.bigpond.net.au has joined #aioc
+01-07-2014 11:11:55 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: AntiForest: *gaining
+01-07-2014 11:12:02 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: [from the tutor perspective]
+01-07-2014 11:12:02 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: epochfail, post that in TC forums
+01-07-2014 11:12:07 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: dahlukeh did i do it right? ^^
+01-07-2014 11:12:08 > epochfail: hash is sum(map(ord, nick)) in a fixed-size list of colours
+01-07-2014 11:12:16 > epochfail: AntiForest: <3
+01-07-2014 11:12:20 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, :D
+01-07-2014 11:12:24 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: Junkbot, yes. :P
+01-07-2014 11:13:38 -!- AbishForester!~AbyssMaul@101.174.61.207 has quit [Ping timeout: 255 seconds]
+01-07-2014 11:14:13 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: parting so good
+01-07-2014 11:14:51 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, too bad I can't watch it
+01-07-2014 11:15:07 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: :(
+01-07-2014 11:15:14 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I'll send screenshots
+01-07-2014 11:16:05 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: heh :P
+01-07-2014 11:16:21 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, I'm enjoying those complexity problems ;) reminds me of the long-solved easy aio problems
+01-07-2014 11:16:34 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: being easy doesn't make them worthwhile. :p
+01-07-2014 11:16:37 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: ^
+01-07-2014 11:16:45 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: in fact, the opposite is almost true
+01-07-2014 11:16:56 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: there's no fun in "solving" something you already knew how to solve
+01-07-2014 11:17:07 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: well, little fun
+01-07-2014 11:17:18 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: uber happiness when solving something you spent years on
+01-07-2014 11:17:31 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: epochfail: >.< ^
+01-07-2014 11:18:33 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: ooo I think I get the reference
+01-07-2014 11:18:34 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, not easy
+01-07-2014 11:18:46 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: it's a pain in the ass not knowing whether something is solvable though
+01-07-2014 11:18:50 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: especially graph theory questions
+01-07-2014 11:19:12 < ishraq!~ishraq@d220-237-41-210.mas801.nsw.optusnet.com.au: yer sometimes you get a problem
+01-07-2014 11:19:16 < ishraq!~ishraq@d220-237-41-210.mas801.nsw.optusnet.com.au: and then it's subset sum
+01-07-2014 11:19:19 -!- AbyssMaul!~AbyssMaul@CPE-121-218-169-224.lnse4.cht.bigpond.net.au has quit [Read error: Connection reset by peer]
+01-07-2014 11:19:21 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: yeah sometimes its trivial but you can't see the answer, sometimes it seems easy but really its hard
+01-07-2014 11:19:23 < ishraq!~ishraq@d220-237-41-210.mas801.nsw.optusnet.com.au: AntiForest: >>
+01-07-2014 11:19:31 -!- AbyssMaul!~AbyssMaul@101.174.167.8 has joined #aioc
+01-07-2014 11:19:35 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bgbnbigben, debugging pratice :D
+01-07-2014 11:19:36 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: ishraq, ?
+01-07-2014 11:19:38 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: DESTROYED
+01-07-2014 11:19:40 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: ishraq, you mean knapsack?
+01-07-2014 11:19:43 < ishraq!~ishraq@d220-237-41-210.mas801.nsw.optusnet.com.au: AntiForest: / 64 TROLOLOLOL
+01-07-2014 11:19:45 < AbyssMaul!~AbyssMaul@101.174.167.8: wtf i keep disconnecting
+01-07-2014 11:19:48 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: HOLY CRAP
+01-07-2014 11:19:50 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: HEY GOOD QUESTION >:(
+01-07-2014 11:20:06 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, I have a screenshot of good forcefields
+01-07-2014 11:20:08 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: and that's it.
+01-07-2014 11:20:12 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: how about fucking kirchoff's theorem?
+01-07-2014 11:20:13 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: haha
+01-07-2014 11:20:13 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: oh, no
+01-07-2014 11:20:15 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I saw the manner nexus
+01-07-2014 11:20:16 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: you missed
+01-07-2014 11:20:20 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: basically
+01-07-2014 11:20:23 < ishraq!~ishraq@d220-237-41-210.mas801.nsw.optusnet.com.au: kirchoffs is great
+01-07-2014 11:20:25 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: what was the warning they're talking about?
+01-07-2014 11:20:27 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: >>
+01-07-2014 11:20:31 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnbigben, he said ggg
+01-07-2014 11:20:52 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: looooooool
+01-07-2014 11:20:57 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: #kespa
+01-07-2014 11:21:00 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yah
+01-07-2014 11:21:01 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: so like
+01-07-2014 11:21:04 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: bye guys
+01-07-2014 11:21:06 -!- gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au has quit [Quit: Leaving]
+01-07-2014 11:21:14 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: terran: There are forcefields. I will run my units around the side
+01-07-2014 11:21:26 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: terran: Those units are dead. I will run my vikings over the top
+01-07-2014 11:21:46 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: terran: Those vikings are dead. I will send the rest of my units one at a time through forcefields
+01-07-2014 11:21:54 > epochfail: terran: i lost the game so may as well get a warning.
+01-07-2014 11:22:14 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: protoss: つ ◕_◕ つ
+01-07-2014 11:22:56 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: so terran is a moron. :p
+01-07-2014 11:23:08 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yah
+01-07-2014 11:28:38 > epochfail: bgbnbigben: father named the biggest box on the rack "bazuka"
+01-07-2014 11:29:01 -!- AbyssMaul!~AbyssMaul@101.174.167.8 has quit [Ping timeout: 244 seconds]
+01-07-2014 11:30:10 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: wat.
+01-07-2014 11:32:32 > epochfail: bgbnbigben: he meant bazooka. also, big things/guns.
+01-07-2014 11:32:46 > epochfail: bgbnbigben: also to quote him as of 5 minutes ago, "i am in a tank"
+01-07-2014 11:32:48 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: oh, lol
+01-07-2014 11:32:52 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I didn't even see the misspell
+01-07-2014 11:55:32 -!- charliesome!~charlieso@host-69-95-65-72.ind.choiceone.net has joined #aioc
+01-07-2014 12:01:52 > epochfail: ahahahahahahha
+01-07-2014 12:02:00 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: epochfail, who won?
+01-07-2014 12:02:01 > epochfail: dat game
+01-07-2014 12:02:03 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: lol
+01-07-2014 12:02:04 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: all I see is one nexus and one ga
+01-07-2014 12:02:06 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: *gas
+01-07-2014 12:02:07 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: that was pretty awesome
+01-07-2014 12:02:07 > epochfail: bgbnbigben: SKT1
+01-07-2014 12:02:10 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: and a loading icon
+01-07-2014 12:02:12 > epochfail: bgbnbigben: complete elimination
+01-07-2014 12:02:14 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: HOLY SHITTTTTTTTTTTTTTT
+01-07-2014 12:02:15 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: killed the gas?
+01-07-2014 12:02:18 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: wtf how?
+01-07-2014 12:02:22 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: WHAT A WIN
+01-07-2014 12:02:23 > epochfail: bgbnbigben: 20 stalkers + blink
+01-07-2014 12:02:32 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: how did zerg lose that?
+01-07-2014 12:02:33 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: not sure why roro backed off
+01-07-2014 12:02:35 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: like... just camp?
+01-07-2014 12:02:37 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: and wait for timeout
+01-07-2014 12:02:41 > epochfail: kennyboy: warp prism retard magnet
+01-07-2014 12:02:51 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: :/
+01-07-2014 12:02:56 > epochfail: kennyboy: :D
+01-07-2014 12:02:57 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: he saw the entire stalker force
+01-07-2014 12:03:00 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: send *a* muta to scout or whatever
+01-07-2014 12:03:26 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: the game shouldn't have timed out. stork still kinda could have recovered
+01-07-2014 12:03:40 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: not given where his nexus was
+01-07-2014 12:03:43 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: and the 1 probe he had left alive.
+01-07-2014 12:03:48 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: by the time he spent his remaining minerals on probes
+01-07-2014 12:03:49 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: he had 900 minerals and 3 workers
+01-07-2014 12:03:52 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: the game would have timed out.
+01-07-2014 12:03:57 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: 900? wasn't it only 200 at the end?
+01-07-2014 12:04:09 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: not unless he built a bunch of nexi
+01-07-2014 12:04:34 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: either that or i'm blind :S
+01-07-2014 12:04:51 > epochfail: kennyboy: stork? wut?
+01-07-2014 12:04:59 > epochfail: f
+01-07-2014 12:05:00 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: errr...rain
+01-07-2014 12:05:18 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: brain was still thinking about last game
+01-07-2014 12:07:28 > epochfail: kennyboy: skt best kt? :P
+01-07-2014 12:07:35 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: :P
+01-07-2014 12:08:57 -!- AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au has quit [Quit: Leaving]
+01-07-2014 12:09:26 -!- FakeEdgewoth!~miles@125.253.98.5 has joined #aioc
+01-07-2014 12:12:07 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: kennyboy, epochfail is amazon fucking up?
+01-07-2014 12:12:55 > epochfail: dahlukeh: in what way?
+01-07-2014 12:13:01 > epochfail: dahlukeh: kennyboy btw final exam is out of 30,000,000 points
+01-07-2014 12:13:05 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: like
+01-07-2014 12:13:15 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I *just* got al those messages
+01-07-2014 12:13:26 > epochfail: dahlukeh: nah it's just yopu
+01-07-2014 12:13:49 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: ok
+01-07-2014 12:27:02 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: kennyboy, gah, stupid starcraft people :(
+01-07-2014 12:27:10 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: ?
+01-07-2014 12:29:30 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: kennyboy, all the drama with shadowbans
+01-07-2014 12:29:52 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, you mean reddit admins.
+01-07-2014 12:30:28 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnbigben, seriously?
+01-07-2014 12:30:33 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: yeah
+01-07-2014 12:30:37 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: like, he was using fucking 40 bots to upvote
+01-07-2014 12:30:40 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: that's pretty shitty
+01-07-2014 12:30:42 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: if you mean with chanman, then sure
+01-07-2014 12:30:45 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: the reddit admins decided to go on a spate of bans
+01-07-2014 12:30:51 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: but i think people are mainly concerned with jakatak
+01-07-2014 12:30:54 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: for breaking the site rules
+01-07-2014 12:30:59 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: jakatak is different
+01-07-2014 12:31:02 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: yeah, jakatak is who I thought you were referring to
+01-07-2014 12:31:07 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: right, well he's been equally dicked
+01-07-2014 12:31:10 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I can see it being a bit...  uh
+01-07-2014 12:31:15 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: nah, he got unbanned
+01-07-2014 12:31:29 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: yeah, i think most people are pretty understanding of why chanman got banned
+01-07-2014 12:31:38 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: jakatak though is a little dodge
+01-07-2014 12:31:38 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yah
+01-07-2014 12:31:43 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: but also slasherd
+01-07-2014 12:31:44 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, he got unbanned on the stipulation that he obeys the 9:1 rule.
+01-07-2014 12:31:54 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: yeah, but something something fuck slasher
+01-07-2014 12:32:14 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: ^
+01-07-2014 12:32:17 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnbigben, yeah, which seems pretty reasonable
+01-07-2014 12:32:19 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: why did he get banned?
+01-07-2014 12:32:20 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: cool
+01-07-2014 12:32:22 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: same reason as jakatak?
+01-07-2014 12:32:26 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: slasher?
+01-07-2014 12:32:28 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: yeah
+01-07-2014 12:32:31 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: he was getting people to upvote his stuff
+01-07-2014 12:32:39 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: oh yeah, well that's understandable too
+01-07-2014 12:32:49 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, right, but jakatak produces content that people like. the 9:1 rule is a guideline anyway
+01-07-2014 12:32:56 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnbigben, sure
+01-07-2014 12:33:07 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: but for memory it was a 0:1 ratio he had before
+01-07-2014 12:33:17 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: right, sure.
+01-07-2014 12:33:25 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: so somewhere in between seems reasonable
+01-07-2014 12:33:31 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: but.... who cares? posting a link should be fine.
+01-07-2014 12:33:36 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: he's not upvotebotting it.
+01-07-2014 12:33:44 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: so it'll only be upvoted if it's actual quality
+01-07-2014 12:33:48 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: unlike ogn and slasher and etc.
+01-07-2014 12:34:09 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnbigben, it could get into spam levels
+01-07-2014 12:34:16 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: especially since it's a link to his own site
+01-07-2014 12:34:25 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: i thought it was mostly youtube vids
+01-07-2014 12:34:31 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: youtube vids.
+01-07-2014 12:34:36 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: their own site is ogn/etc.
+01-07-2014 12:34:51 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: oh, right
+01-07-2014 12:36:15 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I don't know, I think it's different when you're posting a link and letting other people decide if they want to see it
+01-07-2014 12:36:23 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: vs ogn posting links and then upvoting to force other sto see it.
+01-07-2014 12:37:42 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: it's still pretty much spamming your website.
+01-07-2014 12:37:54 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I think in this case it wasn't causing too much harm
+01-07-2014 12:38:06 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: but in other subs, it's pretty terrible
+01-07-2014 12:38:33 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: dahlukeh, but what's the difference? now everyone else will do it for him
+01-07-2014 12:38:38 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: since he clearly produces content people want to see.
+01-07-2014 12:39:14 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: are we talking about jakatak or slasher?
+01-07-2014 12:39:26 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: I'm talking about jakatak.
+01-07-2014 12:39:29 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: fuck slasher etc.
+01-07-2014 12:39:31 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: hokai
+01-07-2014 12:39:42 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: yeah, i got confused 'cause i thought you were talking about slasher
+01-07-2014 12:42:59 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: jakatak?
+01-07-2014 12:44:00 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: no, slasher is a spamming knob. :P
+01-07-2014 12:44:16 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: but he didn't break the 9:1 rule, he broke the "get others to post your content because you're shadowbanned" rule.
+01-07-2014 12:44:42 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: kennyboy, is there a way to restart amazon?
+01-07-2014 12:44:54 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: dahlukeh: sudo reboot or something like that
+01-07-2014 12:45:14 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: k
+01-07-2014 12:45:26 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: brb
+01-07-2014 12:45:39 -!- dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com has quit [Quit: :(]
+01-07-2014 12:45:42 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: dahlukeh: consider checking lo...
+01-07-2014 12:45:48 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: oh, okay
+01-07-2014 12:46:35 -!- ishraq!~ishraq@d220-237-41-210.mas801.nsw.optusnet.com.au has quit [Remote host closed the connection]
+01-07-2014 12:53:34 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: kennyboy, you tried. :P
+01-07-2014 12:54:41 -!- dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com has joined #aioc
+01-07-2014 12:54:52 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: alrighty!
+01-07-2014 12:54:58 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: hopefully this will be less bad :S
+01-07-2014 12:55:21 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: kennyboy, what were you saying?
+01-07-2014 12:55:41 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: dahlukeh: consider checking logs to see if the timestamps are all batched or not
+01-07-2014 12:55:50 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: dahlukeh: logs as in znc logs
+01-07-2014 12:59:35 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: kennyboy, don't have it installed...
+01-07-2014 12:59:43 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: oh
+01-07-2014 12:59:48 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: :/
+01-07-2014 13:02:37 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: hmmmm
+01-07-2014 13:03:34 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: ok set it up
+01-07-2014 13:32:47 -!- Lyucit is now known as tetrapus
+01-07-2014 13:33:50 -!- charliesome!~charlieso@host-69-95-65-72.ind.choiceone.net has quit [Quit: My MacBook Pro has gone to sleep. ZZZzzz…]
+01-07-2014 13:39:21 < sarahb!~sarahb@unaffiliated/notsarah: #yoloswag
+01-07-2014 13:44:00 < amoebius!~amoebius@ec2-54-86-85-13.compute-1.amazonaws.com: sarahb, your latest picture is due to restricted memory right? =P
+01-07-2014 13:48:48 -!- FakeEdgewoth!~miles@125.253.98.5 has quit [Read error: Connection reset by peer]
+01-07-2014 13:52:31 -!- charliesome!~charlieso@ip-64-134-68-248.public.wayport.net has joined #aioc
+01-07-2014 14:00:42 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: holy fuck I hate compile errors.
+01-07-2014 14:42:09 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: Junkbot, nope nope nope nope onpe
+01-07-2014 14:42:09 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: https://www.youtube.com/watch?v=g2C22nbwg2s&feature=youtu.be
+01-07-2014 14:45:13 < amoebius!~amoebius@ec2-54-86-85-13.compute-1.amazonaws.com: bgbnbigben, D:
+01-07-2014 14:53:40 < Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au: bgbnbigben: :(
+01-07-2014 15:11:19 -!- Junkbot!~Junkbotub@202-159-156-12.dyn.iinet.net.au has quit [Remote host closed the connection]
+01-07-2014 15:45:14 -!- auscompgeek!aucg@firefox/community/auscompgeek has quit [Read error: Connection reset by peer]
+01-07-2014 15:46:43 -!- Winestone!~Winestone@c122-106-164-128.carlnfd1.nsw.optusnet.com.au has quit [Ping timeout: 260 seconds]
+01-07-2014 15:49:52 -!- Winestone!~Winestone@c122-106-164-128.carlnfd1.nsw.optusnet.com.au has joined #aioc
+01-07-2014 16:17:33 -!- charliesome!~charlieso@ip-64-134-68-248.public.wayport.net has quit [Remote host closed the connection]
+01-07-2014 16:18:16 -!- charliesome!~charlieso@ip-64-134-68-248.public.wayport.net has joined #aioc
+01-07-2014 18:05:15 -!- Winestone!~Winestone@c122-106-164-128.carlnfd1.nsw.optusnet.com.au has quit [Ping timeout: 248 seconds]
+01-07-2014 18:05:42 -!- Winestone!~Winestone@c122-106-164-128.carlnfd1.nsw.optusnet.com.au has joined #aioc
+01-07-2014 20:31:49 -!- auscompgeek!aucg@firefox/community/auscompgeek has joined #aioc
+01-07-2014 20:35:26 -!- charliesome!~charlieso@ip-64-134-68-248.public.wayport.net has quit [Read error: Connection reset by peer]
+01-07-2014 20:35:44 -!- charliesome!~charlieso@ip-64-134-68-248.public.wayport.net has joined #aioc
+01-07-2014 20:39:01 -!- charliesome!~charlieso@ip-64-134-68-248.public.wayport.net has quit [Client Quit]
+01-07-2014 22:16:19 -!- charliesome!~charlieso@173-13-32-35-Pennsylvania.hfc.comcastbusiness.net has joined #aioc
+01-07-2014 22:17:43 -!- charliesome_!~charlieso@host-69-95-65-72.ind.choiceone.net has joined #aioc
+01-07-2014 22:20:58 -!- charliesome!~charlieso@173-13-32-35-Pennsylvania.hfc.comcastbusiness.net has quit [Ping timeout: 255 seconds]
+01-07-2014 23:10:56 -!- AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au has joined #aioc
+02-07-2014 00:01:07 > epochfail: bgbnbigben: dahlukeh kennyboy wcs america, losers/winners match next: http://www.twitch.tv/wcs_america
+02-07-2014 00:51:56 -!- Junkbot!~Junkbotub@124-149-49-115.dyn.iinet.net.au has joined #aioc
+02-07-2014 00:56:58 -!- Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com has joined #aioc
+02-07-2014 00:57:04 < Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com: whoa
+02-07-2014 01:04:32 -!- Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com has quit [Remote host closed the connection]
+02-07-2014 01:06:45 -!- Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com has joined #aioc
+02-07-2014 01:07:10 -!- Junkbot!~Junkbotub@124-149-49-115.dyn.iinet.net.au has quit [Read error: Connection reset by peer]
+02-07-2014 01:09:37 < Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com: yaya! go dijkstras.
+02-07-2014 01:12:41 -!- Junkbot!~Junkbotub@124-170-193-14.dyn.iinet.net.au has joined #aioc
+02-07-2014 01:15:07 -!- Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com has quit [Remote host closed the connection]
+02-07-2014 01:19:49 > epochfail: kennyboy: you just missed a pretty quick tvz
+02-07-2014 01:31:04 -!- charliesome_ is now known as charliesome
+02-07-2014 01:37:13 -!- Junkbot!~Junkbotub@124-170-193-14.dyn.iinet.net.au has quit [Ping timeout: 252 seconds]
+02-07-2014 01:38:24 -!- ishraq!~ishraq@d220-237-41-210.mas801.nsw.optusnet.com.au has joined #aioc
+02-07-2014 01:39:23 -!- Winestone!~Winestone@c122-106-164-128.carlnfd1.nsw.optusnet.com.au has quit [Quit:  HydraIRC -> http://www.hydrairc.com <- Would you like to know more?]
+02-07-2014 01:41:59 -!- Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au has joined #aioc
+02-07-2014 01:42:12 < Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au: does anyone else's internet seem to keep dropping out lately?
+02-07-2014 01:42:26 < Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au: i heard abyssmaul's was a bit
+02-07-2014 01:43:14 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: yeah
+02-07-2014 01:43:18 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: abyssmaul wouldn't stop dcing
+02-07-2014 01:43:24 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I think my internet has been a bit slow lately
+02-07-2014 01:43:27 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: but not many dc's
+02-07-2014 01:45:42 -!- ishraq_!~ishraq@d220-237-41-210.mas801.nsw.optusnet.com.au has joined #aioc
+02-07-2014 01:47:07 -!- ishraq!~ishraq@d220-237-41-210.mas801.nsw.optusnet.com.au has quit [Ping timeout: 252 seconds]
+02-07-2014 01:47:40 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: yeah
+02-07-2014 01:47:47 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: mine does
+02-07-2014 01:47:55 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: not that you see it given the bouncer
+02-07-2014 01:48:12 < Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au: DpEpsilon: how often?
+02-07-2014 01:48:21 < Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au: [and which isp]
+02-07-2014 01:48:32 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: like, it was d/cing every one or two minutes
+02-07-2014 01:48:43 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: and iinet reseller
+02-07-2014 01:48:47 < Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au: ah i remember
+02-07-2014 01:48:55 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: :P
+02-07-2014 01:49:04 < Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au: DpEpsilon: yeah same/was same but iinet bought them
+02-07-2014 01:49:24 < Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au: DpEpsilon: is it still doing that?
+02-07-2014 01:49:32 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: not so far today
+02-07-2014 01:49:41 < Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au: ok
+02-07-2014 01:49:44 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: it was going crazy yesterday
+02-07-2014 01:50:10 < Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au: yeah i just have a persistent ping to google going just to check if it's gone down >:C
+02-07-2014 01:50:17 < Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au: which is sad
+02-07-2014 01:50:20 < Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au: in this day and age, at least
+02-07-2014 01:50:35 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: yeah :/
+02-07-2014 02:29:42 -!- Junkbotbot!~Junkbotub@202-159-142-109.dyn.iinet.net.au has joined #aioc
+02-07-2014 02:32:13 -!- Junkbot!~Junkbotub@124-169-10-179.dyn.iinet.net.au has quit [Ping timeout: 252 seconds]
+02-07-2014 02:39:25 -!- olsamsons!~olsamsons@110-175-1-178.static.tpgi.com.au has joined #aioc
+02-07-2014 02:44:13 -!- Junkbotbot!~Junkbotub@202-159-142-109.dyn.iinet.net.au has quit [Ping timeout: 255 seconds]
+02-07-2014 02:45:04 -!- Junkbotbot!~Junkbotub@202-159-138-159.dyn.iinet.net.au has joined #aioc
+02-07-2014 02:52:32 < Junkbotbot!~Junkbotub@202-159-138-159.dyn.iinet.net.au: bgbnbigben: http://www.cricket.com.au/news-list/2014/7/2/aaron-finch-adam-lyth-wonder-catch-repeated-seagull-hit-england
+02-07-2014 02:57:35 -!- Junkbotbot!~Junkbotub@202-159-138-159.dyn.iinet.net.au has quit [Ping timeout: 240 seconds]
+02-07-2014 02:58:40 -!- Junkbotbot!~Junkbotub@124-168-50-163.dyn.iinet.net.au has joined #aioc
+02-07-2014 03:13:48 -!- charliesome!~charlieso@host-69-95-65-72.ind.choiceone.net has quit [Quit: My MacBook Pro has gone to sleep. ZZZzzz…]
+02-07-2014 03:17:18 -!- Junkbotbot!~Junkbotub@124-168-50-163.dyn.iinet.net.au has quit [Ping timeout: 264 seconds]
+02-07-2014 03:26:57 -!- Goldy!~goldy@c-24-6-103-33.hsd1.ca.comcast.net has joined #aioc
+02-07-2014 03:30:13 -!- Junkbotbot!~Junkbotub@124-169-2-75.dyn.iinet.net.au has joined #aioc
+02-07-2014 03:32:13 -!- Junkbot[desktop]!~Junkbotub@202-159-161-8.dyn.iinet.net.au has joined #aioc
+02-07-2014 03:35:07 -!- Junkbotbot!~Junkbotub@124-169-2-75.dyn.iinet.net.au has quit [Ping timeout: 260 seconds]
+02-07-2014 03:35:25 -!- Junkbotbot!~Junkbotub@124-169-6-206.dyn.iinet.net.au has joined #aioc
+02-07-2014 03:37:05 -!- Junkbot[desktop]!~Junkbotub@202-159-161-8.dyn.iinet.net.au has quit [Ping timeout: 240 seconds]
+02-07-2014 03:40:12 -!- gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au has joined #aioc
+02-07-2014 03:59:53 < Junkbotbot!~Junkbotub@124-169-6-206.dyn.iinet.net.au: DpEpsilon: http://www.iinet.net.au/status/fault.php?id=3237903
+02-07-2014 04:00:01 < Junkbotbot!~Junkbotub@124-169-6-206.dyn.iinet.net.au: i'm not on NBN, but everything else seems like me.
+02-07-2014 04:00:44 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: huh
+02-07-2014 04:01:00 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbotbot: ty
+02-07-2014 04:01:16 < Junkbotbot!~Junkbotub@124-169-6-206.dyn.iinet.net.au: it didn't really say anything about specific areas, though
+02-07-2014 04:01:27 < Junkbotbot!~Junkbotub@124-169-6-206.dyn.iinet.net.au: bgbnbigben: you're on iinet; how's connection been lately?
+02-07-2014 04:01:37 -!- Junkbotbot is now known as junkbot
+02-07-2014 04:01:39 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: slow as balls but otherwise acceptable.
+02-07-2014 04:01:42 -!- junkbot is now known as Junkbot
+02-07-2014 04:10:58 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: interesting...
+02-07-2014 04:13:09 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: wow that's a long time
+02-07-2014 04:22:51 < Goldy!~goldy@c-24-6-103-33.hsd1.ca.comcast.net: so IOI’s coming up
+02-07-2014 04:22:55 < Goldy!~goldy@c-24-6-103-33.hsd1.ca.comcast.net: is everyone excited?!
+02-07-2014 04:23:48 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: oh god, goldy wrote a problem
+02-07-2014 04:23:51 < auscompgeek!aucg@firefox/community/auscompgeek: how does one spectate IOI
+02-07-2014 04:23:55 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: you don't
+02-07-2014 04:23:57 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: please don't
+02-07-2014 04:23:58 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: :(
+02-07-2014 04:24:00 < auscompgeek!aucg@firefox/community/auscompgeek: aww
+02-07-2014 04:24:16 < auscompgeek!aucg@firefox/community/auscompgeek: but, but...
+02-07-2014 04:24:40 < Goldy!~goldy@c-24-6-103-33.hsd1.ca.comcast.net: AntiForest: im too benevolent for that. i donate all my problems to australian exams
+02-07-2014 04:25:04 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: ooo guessing game
+02-07-2014 04:25:07 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: so I know memes is yours
+02-07-2014 04:26:04 < Goldy!~goldy@c-24-6-103-33.hsd1.ca.comcast.net: in the past 2 years, 3 exam problems were written by me and 1 was proposed (but not created) by me
+02-07-2014 04:26:20 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: I know 2 from 2 years ago
+02-07-2014 04:26:23 -!- Goldy!~goldy@c-24-6-103-33.hsd1.ca.comcast.net has quit [Quit: Goldy]
+02-07-2014 04:28:26 -!- Goldy!~goldy@c-24-6-103-33.hsd1.ca.comcast.net has joined #aioc
+02-07-2014 04:28:31 < Goldy!~goldy@c-24-6-103-33.hsd1.ca.comcast.net: sorry computer died
+02-07-2014 04:29:38 < AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au: o.o
+02-07-2014 04:40:36 -!- Junkbot!~Junkbotub@124-169-6-206.dyn.iinet.net.au has quit [Remote host closed the connection]
+02-07-2014 04:43:51 -!- Goldy!~goldy@c-24-6-103-33.hsd1.ca.comcast.net has quit [Quit: Goldy]
+02-07-2014 04:52:19 -!- sarahcat!~notsarah@unaffiliated/notsarah has joined #aioc
+02-07-2014 04:57:24 -!- ishraq_!~ishraq@d220-237-41-210.mas801.nsw.optusnet.com.au has quit [Ping timeout: 252 seconds]
+02-07-2014 04:59:07 -!- ishraq!~ishraq@d220-237-34-221.mas801.nsw.optusnet.com.au has joined #aioc
+02-07-2014 05:03:37 -!- Goldy!~goldy@c-24-6-103-33.hsd1.ca.comcast.net has joined #aioc
+02-07-2014 05:15:55 -!- ishraq!~ishraq@d220-237-34-221.mas801.nsw.optusnet.com.au has quit [Ping timeout: 260 seconds]
+02-07-2014 05:17:43 -!- ishraq!~ishraq@d220-237-39-53.mas801.nsw.optusnet.com.au has joined #aioc
+02-07-2014 05:19:46 -!- olsamsons!~olsamsons@110-175-1-178.static.tpgi.com.au has quit [Remote host closed the connection]
+02-07-2014 05:32:58 -!- ishraq!~ishraq@d220-237-39-53.mas801.nsw.optusnet.com.au has quit [Ping timeout: 244 seconds]
+02-07-2014 05:35:07 -!- ishraq!~ishraq@d110-33-196-149.mas801.nsw.optusnet.com.au has joined #aioc
+02-07-2014 05:49:12 -!- Goldy!~goldy@c-24-6-103-33.hsd1.ca.comcast.net has left #aioc
+02-07-2014 05:49:40 -!- ishraq!~ishraq@d110-33-196-149.mas801.nsw.optusnet.com.au has quit [Ping timeout: 252 seconds]
+02-07-2014 05:51:35 -!- ishraq!~ishraq@d220-237-45-203.mas801.nsw.optusnet.com.au has joined #aioc
+02-07-2014 06:10:34 -!- sarahcat!~notsarah@unaffiliated/notsarah has quit [Ping timeout: 252 seconds]
+02-07-2014 06:29:25 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: epochfail, kennyboy bgbnbigben sc some time?
+02-07-2014 06:29:50 < kennyboy!~ken@ec2-54-79-14-174.ap-southeast-2.compute.amazonaws.com: dahlukeh: i'm up for that
+02-07-2014 06:29:52 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: unless we do so pretty much now, I usually leave home at 1830 on Wednesdays and don't get home until like 2230-2300 -- guess we could do it after, too
+02-07-2014 06:30:02 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: bgbnbigben, now is good
+02-07-2014 06:30:39 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: alright, one sec -- buying a phone off some dodgy ebay vendor. :p
+02-07-2014 06:30:56 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: bgbnbigben, k, having to update
+02-07-2014 06:31:04 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: boy, you haven't played in a while
+02-07-2014 06:31:10 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: nup
+02-07-2014 06:34:21 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: favourite server? (NA?)
+02-07-2014 06:37:02 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: bgbnbigben, yah
+02-07-2014 06:37:05 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: kennyboy, bgbnbigben skype?
+02-07-2014 06:37:55 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: suuuure
+02-07-2014 06:37:56 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: one sec
+02-07-2014 06:38:00 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: actually skype is already open
+02-07-2014 06:38:00 < bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au: lol
+02-07-2014 06:39:00 -!- AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au has quit [Quit: Leaving]
+02-07-2014 07:13:17 -!- Junkbot!~Junkbotub@124-149-55-136.dyn.iinet.net.au has joined #aioc
+02-07-2014 07:30:01 -!- sarahcat!~notsarah@unaffiliated/notsarah has joined #aioc
+02-07-2014 08:24:58 -!- sarahcat!~notsarah@unaffiliated/notsarah has quit [Ping timeout: 248 seconds]
+02-07-2014 08:30:35 < auscompgeek!aucg@firefox/community/auscompgeek: why not get one of those free 5-slot mumble servers?
+02-07-2014 08:31:57 -!- Dalordish!~Richard@220-245-155-77.static.tpgi.com.au has joined #aioc
+02-07-2014 08:40:35 -!- Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com has joined #aioc
+02-07-2014 08:41:06 < Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com: Dalordish: ping. btw? what happened to the q? :P
+02-07-2014 08:46:12 < Dalordish!~Richard@220-245-155-77.static.tpgi.com.au: pong! q?
+02-07-2014 08:46:42 -!- bgbnb1gben!~ben@124-148-190-5.dyn.iinet.net.au has joined #aioc
+02-07-2014 08:47:05 -!- bgbnbigben!~ben@124-148-190-5.dyn.iinet.net.au has quit [Ping timeout: 272 seconds]
+02-07-2014 08:48:25 < auscompgeek!aucg@firefox/community/auscompgeek: oh dear
+02-07-2014 08:49:36 -!- Dalordish!~Richard@220-245-155-77.static.tpgi.com.au has left #aioc ["Leaving"]
+02-07-2014 08:49:37 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: Dalordish, he's talking about when he asked you to change his name
+02-07-2014 08:49:42 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: FFS ARE YOU SERIOUS
+02-07-2014 08:49:51 < Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com: gongy: *just* missed :P
+02-07-2014 08:49:52 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: he literally left when i hit enter
+02-07-2014 08:50:07 < Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com: lols
+02-07-2014 08:51:08 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: Ed_code2, solved any hard problems lately?
+02-07-2014 08:52:33 -!- qDalordish!~Richard@220-245-155-77.static.tpgi.com.au has joined #aioc
+02-07-2014 08:53:32 < Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com: :P
+02-07-2014 08:55:05 -!- bgbnb1gben!~ben@124-148-190-5.dyn.iinet.net.au has quit [Ping timeout: 240 seconds]
+02-07-2014 08:57:55 -!- qDalordish!~Richard@220-245-155-77.static.tpgi.com.au has quit [Quit: Leaving]
+02-07-2014 09:04:35 -!- gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au has quit [Quit: debugging]
+02-07-2014 09:05:34 > epochfail: maaan, i forgot to add the #aioc magic to scrollback
+02-07-2014 09:06:48 -!- Ed_code2!~email@75-128-53-103.static.mtpk.ca.charter.com has quit [Remote host closed the connection]
+02-07-2014 09:07:16 > epochfail: bgbgbgbg i am back! my answer is yes!
+02-07-2014 09:07:16 -!- gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au has joined #aioc
+02-07-2014 09:07:35 > epochfail: dahlukeh: am i a comedic genius or what? :P
+02-07-2014 09:07:44 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: go home
+02-07-2014 09:07:46 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: you're drunk
+02-07-2014 09:07:52 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: dude
+02-07-2014 09:07:55 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: don't be racist
+02-07-2014 09:08:00 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: :P
+02-07-2014 09:08:11 > epochfail: dahlukeh: mate, i am 12, it's illegal for me to be drunk in this stupid country
+02-07-2014 09:08:20 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: in Russia, vodka drink you
+02-07-2014 09:08:57 < dahlukeh!~dahlukeh@ec2-54-79-74-85.ap-southeast-2.compute.amazonaws.com: epochfail, not in tasminia it isn't
+02-07-2014 09:09:01 < gongy!~gongy@c220-239-97-230.belrs4.nsw.optusnet.com.au: In soviet russia, you are, therefore you drinkp
+02-07-2014 09:13:16 < auscompgeek!aucg@firefox/community/auscompgeek: what #aioc magic :o
+02-07-2014 09:13:51 > epochfail: auscompgeek: the bolded scrollback
+02-07-2014 09:14:03 < auscompgeek!aucg@firefox/community/auscompgeek: ah.
+02-07-2014 09:14:10 < jesse!~jesse@unaffiliated/jesse: oh my god it even has colours now
+02-07-2014 09:14:51 < auscompgeek!aucg@firefox/community/auscompgeek: that pink on white is horrible
+02-07-2014 09:15:15 < auscompgeek!aucg@firefox/community/auscompgeek: aqua is worse though
+02-07-2014 09:15:32 > epochfail: it's okay, kennyboy never talks anyway
+02-07-2014 09:20:20 > epochfail: dahlukeh: kennyboy: opal card sooo good, it doesn't function between different opal-supporting types of buses.
+02-07-2014 09:20:26 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: epochfail: I've meant to ask you, what's the condition for <b> on scrollback?
+02-07-2014 09:20:35 > epochfail: DpEpsilon: ~~ magic ~~
+02-07-2014 09:20:38 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: s/meant/been meaning/
+02-07-2014 09:20:38 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: ok
+02-07-2014 09:20:45 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: hold on, I think I know a few
+02-07-2014 09:20:49 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: there's #aioc
+02-07-2014 09:20:52 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: hahahahahahaha
+02-07-2014 09:20:59 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: anything else?
+02-07-2014 09:21:29 > epochfail: DpEpsilon: look at the large scrollback and tell me if you spot a pattern :P
+02-07-2014 09:21:43 > epochfail: DpEpsilon: however, it is basically "#aioc magic".
+02-07-2014 09:21:56 < jesse!~jesse@unaffiliated/jesse: okokokokokokokokokokokokok
+02-07-2014 09:22:11 < jesse!~jesse@unaffiliated/jesse: gotcha
+02-07-2014 09:22:13 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: ah, repeated chars
+02-07-2014 09:22:24 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: bgbnbgbnbgbnbgbnbgbnbgbnbgbnbgbnbgbnbgbn
+02-07-2014 09:22:28 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: ignore me, just testing
+02-07-2014 09:22:34 -!- AbyssMaul!~AbyssMaul@CPE-124-183-95-247.lns13.ken.bigpond.net.au has joined #aioc
+02-07-2014 09:22:35 > epochfail: this was NOT an invitation to spam this chan
+02-07-2014 09:22:44 > epochfail: >tell me if
+02-07-2014 09:22:51 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: epochfail: I'm done now
+02-07-2014 09:22:54 < jesse!~jesse@unaffiliated/jesse: ^
+02-07-2014 09:23:00 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: I figure people know how it works now
+02-07-2014 09:23:24 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: epochfail: I SPOT A PATTERN
+02-07-2014 09:23:24 > epochfail: DpEpsilon: i'd link to a relevant aiocdb entry but i took it down
+02-07-2014 09:23:36 > epochfail: DpEpsilon: it started off with tiki
+02-07-2014 09:23:54 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: epochfail: repeating the name in order to summon?
+02-07-2014 09:24:09 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: epochfail: dude, I may not have been around as long as you, but I'm still an oldfag
+02-07-2014 09:24:29 < jesse!~jesse@unaffiliated/jesse: DpEpsilon: you forget epochfail is 12
+02-07-2014 09:24:42 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: jesse: I mean, in terms of #aioc participation
+02-07-2014 09:28:49 < auscompgeek!aucg@firefox/community/auscompgeek: needs more highlighting nicks within messages, methinks.
+02-07-2014 09:29:17 < auscompgeek!aucg@firefox/community/auscompgeek: I like to decorate my scrollback like a Christmas tree.
+02-07-2014 09:46:44 > epochfail: auscompgeek: i'd add ip-specific rules but cbf]
