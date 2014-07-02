@@ -1,0 +1,1000 @@
+24-06-2014 09:06:21 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: like
+24-06-2014 09:06:27 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: what does the function do?
+24-06-2014 09:06:33 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: characters?
+24-06-2014 09:06:43 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: It reads in characters from an input file
+24-06-2014 09:06:50 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: into a certain memory location
+24-06-2014 09:07:03 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: s/characters/a specificed number of characters/
+24-06-2014 09:07:52 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yeah...
+24-06-2014 09:08:05 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: does it do anything else?
+24-06-2014 09:08:10 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: how many characters?
+24-06-2014 09:08:12 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: when does it stop?
+24-06-2014 09:08:29 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: It stops at the end of the line, dahlukeh, i think
+24-06-2014 09:09:08 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: It's ice escape if that helps
+24-06-2014 09:09:22 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: http://orac.amt.edu.au/cgi-bin/train/problem.pl?set=aio07int&problemid=336
+24-06-2014 09:09:38 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I know what the function does
+24-06-2014 09:09:52 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: yeah I thought you were testing me xD
+24-06-2014 09:10:32 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: I can explain my alg if my code's too messy
+24-06-2014 09:12:23 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: like
+24-06-2014 09:12:28 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I know what it's doing
+24-06-2014 09:12:41 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: and I know where it is wrong
+24-06-2014 09:12:52 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: you're not correctly handling the input given by fgets
+24-06-2014 09:14:10 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Continue please?
+24-06-2014 09:14:18 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: ?
+24-06-2014 09:14:26 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: what's wrong?
+24-06-2014 09:14:42 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: http://www.cplusplus.com/reference/cstdio/fgets/
+24-06-2014 09:14:45 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: ^ read
+24-06-2014 09:15:21 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: doing so now
+24-06-2014 09:15:38 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: (as a hint: if you read it and don't understand why you were linked to it, read it again _very carefully_)
+24-06-2014 09:15:39 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: is it this bloody monster? 'A newline character makes fgets stop reading, but it is considered a valid character by the function and included in the string copied to str.'
+24-06-2014 09:15:49 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: perhaps
+24-06-2014 09:16:55 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: OK well
+24-06-2014 09:17:06 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: the crash is definitely an invalid array read
+24-06-2014 09:19:24 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dahlukeh - im fixing it now. is '\n' the newline character
+24-06-2014 09:19:29 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yes
+24-06-2014 09:19:31 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ok
+24-06-2014 09:19:37 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: should be good now then
+24-06-2014 09:19:41 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: *fingerscrossed*
+24-06-2014 09:20:16 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: also, I assume you're testing locally, right?
+24-06-2014 09:20:21 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: like, your "test" isn't just "submit to orac"?
+24-06-2014 09:20:41 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: yeah its just submit to orac
+24-06-2014 09:20:43 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: is that bad...
+24-06-2014 09:20:50 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: also 100% thanks dahlukeh...
+24-06-2014 09:21:25 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: bgbnb1gben: I probably should start doing local testing because I've been told that's how the aio works
+24-06-2014 09:21:41 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: yes, you don't get instant feedback in the AIO
+24-06-2014 09:21:45 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: and debugging/designing test cases is a skill
+24-06-2014 09:21:47 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, so, as long as you don't spam orac with submissions we're fine with it
+24-06-2014 09:21:50 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: it's just bad practice
+24-06-2014 09:21:56 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: oh crap
+24-06-2014 09:22:06 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: you want to test at least on the sample data, and perhaps a few small cases
+24-06-2014 09:22:12 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: well duh
+24-06-2014 09:22:12 < auscompgeek!aucg@firefox/community/auscompgeek: indeed
+24-06-2014 09:22:24 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: I do that... but I when i'm 80% confident I go for orac
+24-06-2014 09:22:32 > epochfail: dahlukeh: kennyboy: espes__: sarahcat: ass2 marks out for distro
+24-06-2014 09:22:34 < amoebius!~amoebius@ec2-54-208-118-146.compute-1.amazonaws.com: why not getline and stringstreams people? =P
+24-06-2014 09:22:54 < amoebius!~amoebius@ec2-54-208-118-146.compute-1.amazonaws.com: bgbnb1gben, you should be injecting more STL here
+24-06-2014 09:23:02 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dahlukeh: that bug didn't show up in my 3 sample cases which I made, and it only really screwed up one of the actual cases
+24-06-2014 09:23:28 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: :(
+24-06-2014 09:23:30 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: I should
+24-06-2014 09:23:39 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: bbiaw dinner
+24-06-2014 09:27:17 > epochfail: dahlukeh: kennyboy: espes__: sarahcat: alright, how much did you beat me by? 23/30, -5 on failCycle because potato
+24-06-2014 09:27:35 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: <bgbnb1gben> and debugging/designing test cases is a skill
+24-06-2014 09:27:43 < * Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au hifives bgbnb1gben 
+24-06-2014 09:29:06 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: amoebius: i still use gets in contests
+24-06-2014 09:29:16 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: because what even is deprecate
+24-06-2014 09:29:25 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: amoebius: also, remember that contest we did with steven
+24-06-2014 09:29:39 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: where we ended up resorting to stringstream for reading variable number of tokens?
+24-06-2014 09:31:26 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: you can totally just look through and check for whitespace ;)
+24-06-2014 09:32:16 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: [ok but why would you]
+24-06-2014 09:32:17 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: [point taken]
+24-06-2014 09:32:54 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: bgbnb1gben: TIL philander is *exactly* 1 year older than broad
+24-06-2014 09:36:53 < sarahcat!~notsarah@unaffiliated/notsarah: epochfail, I haven't done ass2 >_______>
+24-06-2014 09:36:54 -!- AdGold!~AdGold@c220-237-118-23.smelb3.vic.optusnet.com.au has quit [Read error: Connection reset by peer]
+24-06-2014 09:36:54 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, 22, cause lol 1 day late
+24-06-2014 09:37:04 > epochfail: dahlukeh: breakdown?
+24-06-2014 09:37:06 > epochfail: sarahcat: :(
+24-06-2014 09:37:12 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: failed failcycle
+24-06-2014 09:37:23 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: then -1 for design doc and code
+24-06-2014 09:37:26 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: and -1 for late
+24-06-2014 09:38:05 > epochfail: dahlukeh: join the cycle club
+24-06-2014 09:38:12 > epochfail: dahlukeh: wanna see my bug?
+24-06-2014 09:38:26 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: no
+24-06-2014 09:38:27 > epochfail: dahlukeh: http://epochfail.com/f/2014-06/Screenshot-28.png
+24-06-2014 09:38:28 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: :P
+24-06-2014 09:38:32 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: (sure, go ahead :P)
+24-06-2014 09:38:49 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: hehe
+24-06-2014 09:39:02 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bad luck :P
+24-06-2014 09:39:11 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: what did you get for dsm btw?
+24-06-2014 09:39:18 > epochfail: dahlukeh: n-1 i think
+24-06-2014 09:39:23 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: right
+24-06-2014 09:40:02 < sarahcat!~notsarah@unaffiliated/notsarah: I don't remember dsm marks
+24-06-2014 09:40:05 < sarahcat!~notsarah@unaffiliated/notsarah: I remmeber being happy with it
+24-06-2014 09:40:26 < amoebius!~amoebius@ec2-54-208-118-146.compute-1.amazonaws.com: Junkbot, yes, you certainly *could* :P
+24-06-2014 09:40:30 < sarahcat!~notsarah@unaffiliated/notsarah: epochfail, n-1 for dsm too
+24-06-2014 09:40:46 -!- AdGold!~AdGold@c220-237-118-23.smelb3.vic.optusnet.com.au has joined #aioc
+24-06-2014 09:40:51 -!- AdGold!~AdGold@c220-237-118-23.smelb3.vic.optusnet.com.au has quit [Remote host closed the connection]
+24-06-2014 09:41:03 > epochfail: sarahcat: nice :D
+24-06-2014 09:45:59 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnb1gben, how did you manage that?
+24-06-2014 09:46:23 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: dahlukeh, ?
+24-06-2014 09:46:26 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnb1gben, orac
+24-06-2014 09:47:19 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: dahlukeh, whaaaa?
+24-06-2014 09:47:22 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: I don't understand
+24-06-2014 09:49:16 < sarahcat!~notsarah@unaffiliated/notsarah: dammit
+24-06-2014 09:49:22 < sarahcat!~notsarah@unaffiliated/notsarah: I spent too long not going to the supermarket
+24-06-2014 09:49:25 < sarahcat!~notsarah@unaffiliated/notsarah: and now it's 8pm
+24-06-2014 09:49:41 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: sarahcat, iga?
+24-06-2014 09:51:55 < sarahcat!~notsarah@unaffiliated/notsarah: dahlukeh, there's a SPAR near my house, it's like an IGA
+24-06-2014 09:52:02 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yeah...
+24-06-2014 10:00:51 > epochfail: dahlukeh: bgbnb1gben kennyboy SPL
+24-06-2014 10:01:00 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, reaaaaaaaaalllllllyyyyyyy
+24-06-2014 10:01:03 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: <3
+24-06-2014 10:01:05 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: god damn  it
+24-06-2014 10:01:10 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I'll have to slow my turrents :(
+24-06-2014 10:04:37 > epochfail: dahlukeh: slow torrents? just yolo it: http://www.speedtest.net/result/3582674842.png
+24-06-2014 10:04:54 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, is this fucking cherrybrook?
+24-06-2014 10:04:58 > epochfail: (i guess i know how much SPL uses)
+24-06-2014 10:05:00 > epochfail: dahlukeh: yes
+24-06-2014 10:05:30 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, well, I guess since there's no one else within 100kms where you are the internet must be fast
+24-06-2014 10:05:30 > epochfail: dahlukeh: on the upside, non-telstra-cable internet options are <100kb
+24-06-2014 10:05:34 > epochfail: :P
+24-06-2014 10:07:54 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, lol such confidence
+24-06-2014 10:11:44 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: ggggggggggg
+24-06-2014 10:14:56 > epochfail: dahlukeh: these koreans are worse than the NA ladder, don't gg before leaving >:C
+24-06-2014 10:19:32 -!- olsamsons!~olsamsons@110-175-1-178.static.tpgi.com.au has joined #aioc
+24-06-2014 10:19:38 > epochfail:  There are four ways of dealing with orphans. Extermination involves the client explicitly killing oﬀ the orphans when the it comes back up. 
+24-06-2014 10:19:45 > epochfail: #distributed
+24-06-2014 10:22:28 -!- Ed_code1!~email@198.50.215.113 has joined #aioc
+24-06-2014 10:27:12 < Ed_code1!~email@198.50.215.113: bgbnb1gben: I know this question is sortta dodgy, but do you know how many practice questions gp had done when he made it the the summer camp?
+24-06-2014 10:29:45 > epochfail: Ed_code1: lots
+24-06-2014 10:30:35 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, what the hell is happening...
+24-06-2014 10:36:00 < Ed_code1!~email@198.50.215.113: epochfail: really?
+24-06-2014 10:36:14 < Ed_code1!~email@198.50.215.113: :( ...
+24-06-2014 10:36:25 < Ed_code1!~email@198.50.215.113: looks like back to the training site for me
+24-06-2014 10:38:46 < Ed_code1!~email@198.50.215.113: If I learn all the B-grade theory can I go straight to A grade? XDXDXDXDXD
+24-06-2014 10:39:15 < Ed_code1!~email@198.50.215.113: and s/lots/56+  ?
+24-06-2014 10:44:42 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: epochfail where the fk do you live to get that godly intenet
+24-06-2014 10:45:11 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, kennyboy bgbnb1gben CATTLEBRUISERSSSSSSSS
+24-06-2014 10:45:13 -!- Ed_code1!~email@198.50.215.113 has quit [Remote host closed the connection]
+24-06-2014 10:45:20 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: damnit, was just about to respond to ed_code
+24-06-2014 10:45:28 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: lol
+24-06-2014 10:45:29 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: :D
+24-06-2014 10:45:33 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: bring on the cruisers
+24-06-2014 10:45:49 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: # questions done != skill
+24-06-2014 10:46:40 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: yeah
+24-06-2014 10:46:41 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: there's that.
+24-06-2014 10:46:49 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: but, <insert rote learning rant here>
+24-06-2014 10:47:17 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: bgbnb1gben: tiny glitch but if you wanna know...
+24-06-2014 10:47:21 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: 336 and 339 are the same problem
+24-06-2014 10:47:24 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: yep
+24-06-2014 10:47:26 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: well aware of this
+24-06-2014 10:47:28 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, yes
+24-06-2014 10:47:30 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: must say though, doing more problems certainly doesn't decrease skill
+24-06-2014 10:47:30 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: if the problem isn't *new*
+24-06-2014 10:47:31 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: we will fix that
+24-06-2014 10:47:32 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: ahahahaha
+24-06-2014 10:47:33 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: i.e. made yesterday
+24-06-2014 10:47:35 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: don't wake up dahlukeh 
+24-06-2014 10:47:38 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: then assume we know it has issues.
+24-06-2014 10:47:41 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: *sigh*
+24-06-2014 10:47:45 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I may as well fix it now...
+24-06-2014 10:48:02 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: sorry?
+24-06-2014 10:48:02 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: why bother? it's a nice little easter egg
+24-06-2014 10:48:05 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: lol
+24-06-2014 10:48:11 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnb1gben, no
+24-06-2014 10:48:16 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: haha, dahlukeh is quite sensitive about invasion :P
+24-06-2014 10:48:20 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: we can make *other* nice little easter eggs
+24-06-2014 10:48:21 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: why?
+24-06-2014 10:48:31 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: dahlukeh, can but never will....
+24-06-2014 10:48:45 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Junkbot: what about dahlukeh and invasion?
+24-06-2014 10:48:46 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: bgbnb1gben: /jaz is definitely an easter egg :P
+24-06-2014 10:48:48 -!- charliesome!~charlieso@c80-216-67-9.bredband.comhem.se has quit [Quit: My MacBook Pro has gone to sleep. ZZZzzz…]
+24-06-2014 10:48:59 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: the problem ids you quoted
+24-06-2014 10:49:01 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: are for the problem 'invasion'
+24-06-2014 10:49:06 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: yeah i know
+24-06-2014 10:49:08 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i just did it
+24-06-2014 10:49:13 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: thanks to that bug, dahlukeh, I'm now tied for first in problems/week
+24-06-2014 10:49:20 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: ahahahaha
+24-06-2014 10:49:25 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: that's what dahlukeh doesn't like about it :P
+24-06-2014 10:49:48 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: [not you in particular, ofc]
+24-06-2014 10:50:02 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: https://dl.dropboxusercontent.com/u/11967147/stupidInvasion.png
+24-06-2014 10:50:15 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, np
+24-06-2014 10:50:58 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: um, not to judge...
+24-06-2014 10:51:11 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: minecraft?
+24-06-2014 10:51:32 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, ?
+24-06-2014 10:51:36 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: oh lol :P
+24-06-2014 10:51:40 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: :P
+24-06-2014 10:51:44 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dahlukeh: why haven't you submitted twice for invasion?
+24-06-2014 10:51:48 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I haven't cleaned up that since 3 years ago
+24-06-2014 10:51:59 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: um
+24-06-2014 10:52:05 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: because I don't want to
+24-06-2014 10:52:07 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I hate that problem
+24-06-2014 10:52:36 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, kennyboy bgbnb1gben BOOM
+24-06-2014 10:52:42 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: nuke
+24-06-2014 10:52:45 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: bringing back memories of avilo
+24-06-2014 10:52:46 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: why u h8
+24-06-2014 10:52:47 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: fml
+24-06-2014 10:53:03 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: y u h8, its g00d pr0bl3m
+24-06-2014 10:53:22 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: ok...
+24-06-2014 10:53:34 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnb1gben, orac
+24-06-2014 10:55:28 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: with 'all problems solved', it includes non-public sets
+24-06-2014 10:55:35 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: but how many non-public problems are there?
+24-06-2014 10:55:41 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: ahahahaha
+24-06-2014 10:55:56 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: izrak has 530+
+24-06-2014 10:56:07 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: 520(
+24-06-2014 10:56:35 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: i too once thought public was is all and end all
+24-06-2014 10:56:38 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: how wrong was i...
+24-06-2014 10:56:54 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: be all and end all... but ok
+24-06-2014 10:56:57 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: sorry xD
+24-06-2014 10:57:02 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: doing Macbeth in school
+24-06-2014 10:57:09 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: and it's a quote from a soliloquy
+24-06-2014 10:57:36 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: So with the unlockable sets
+24-06-2014 10:57:42 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: is it the 'challenge' ones
+24-06-2014 10:57:45 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: 758 i think.
+24-06-2014 10:57:52 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: holy crap
+24-06-2014 10:57:57 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: there are a few unlockable sets
+24-06-2014 10:58:07 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, 741
+24-06-2014 10:58:16 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: oh, i was just going off problem ids :p
+24-06-2014 10:58:19 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: to get access to the 741 sets, you need to do what?
+24-06-2014 10:58:21 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: so yeah, you'd be right
+24-06-2014 10:58:29 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: 741 problems
+24-06-2014 10:58:31 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: but to get them
+24-06-2014 10:58:31 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yeah, something something DATABASE WOW
+24-06-2014 10:58:42 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: make and show up at informatics camps? :)
+24-06-2014 10:58:42 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: what? 
+24-06-2014 10:58:53 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ahhhh
+24-06-2014 10:58:54 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: that
+24-06-2014 10:58:56 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: well
+24-06-2014 10:59:06 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: i concede that my psql-fu is far inferior to yours :)
+24-06-2014 10:59:21 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: if (i miss a maths camp AND i get in an info) {i'll probably come}
+24-06-2014 10:59:24 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dammit
+24-06-2014 10:59:35 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: s/i'll probably come/i'll probably come;/
+24-06-2014 10:59:39 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, if you ask and have solved a lot of public, we will give you some more
+24-06-2014 10:59:46 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: bgbnb1gben: didn't we use jerry as a pin-up boy for maths v informatics? :P
+24-06-2014 10:59:50 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: when dahlukeh says "have solved a lot"
+24-06-2014 10:59:55 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: lol jerry
+24-06-2014 10:59:56 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: what dahlukeh neans is "have solved 95%"
+24-06-2014 10:59:59 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yah
+24-06-2014 11:00:01 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: like
+24-06-2014 11:00:05 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: "I solved all the AIO intermediates"
+24-06-2014 11:00:06 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: bgbnb1gben: you really mean "more than ishraq"
+24-06-2014 11:00:06 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: have done 3/4 of most farios
+24-06-2014 11:00:07 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: :P
+24-06-2014 11:00:08 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: that's not a lot.
+24-06-2014 11:00:15 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: lol
+24-06-2014 11:00:17 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: lets say... 100 public problems?
+24-06-2014 11:00:20 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i was just scared
+24-06-2014 11:00:20 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: "I have 5 problems left to solve and I'm really bored now"
+24-06-2014 11:00:22 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: by 524
+24-06-2014 11:00:25 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: that is a lot. :P
+24-06-2014 11:00:33 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i don't ACTUALLY need more
+24-06-2014 11:00:35 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: dahlukeh, if you solve 100 public problems? there are significantly more than that, no?
+24-06-2014 11:00:36 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: 100 back in *our* day
+24-06-2014 11:00:48 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: there's like, 140-145 or smth public now
+24-06-2014 11:00:51 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: sorry if i sounded like i was asking for more, i'm not xD
+24-06-2014 11:00:52 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: 100 is like, 66%
+24-06-2014 11:00:55 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: hmmmm
+24-06-2014 11:01:29 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i can't even do intermediate #3's within 3 weeks
+24-06-2014 11:01:35 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: bgbnb1gben wow i can "kind of" pull off the "i'm old now" stint
+24-06-2014 11:01:36 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i always think about them though
+24-06-2014 11:01:40 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: :D
+24-06-2014 11:01:43 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: there is something in info which is addictive - not in maths lol
+24-06-2014 11:01:54 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: if you can't do a maths problem ur like - eh, ill do anothe rone
+24-06-2014 11:02:23 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: heh, and then you realise there's only 3 of them and you now have 4 hours left.
+24-06-2014 11:02:24 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: :)
+24-06-2014 11:02:36 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: [the same goes for info exams, fwiw]
+24-06-2014 11:02:50 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: what are you referring to?
+24-06-2014 11:02:56 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: oh imo?
+24-06-2014 11:03:08 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: isn't it 4.5 hours
+24-06-2014 11:03:21 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: all elements of {informatics olympiad exams} U {maths olympiad exams}
+24-06-2014 11:03:43 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i just can't concentrate for more than 1 hour on maths
+24-06-2014 11:03:56 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: but i went 12pm to 7pm one day doing one problem
+24-06-2014 11:04:00 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: (info)
+24-06-2014 11:04:08 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: cool
+24-06-2014 11:06:18 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, 138 public problems
+24-06-2014 11:06:22 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: wow dem revelations 
+24-06-2014 11:06:29 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: just enabled 'all competitors'
+24-06-2014 11:06:38 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: mrw Junkbot - 560
+24-06-2014 11:06:40 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: 561*
+24-06-2014 11:06:58 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: so i have to confess
+24-06-2014 11:07:09 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: quite a few of those really shouldn't count
+24-06-2014 11:07:14 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, ...
+24-06-2014 11:07:15 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, :(
+24-06-2014 11:07:17 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: glitches?
+24-06-2014 11:07:26 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: i put up problems
+24-06-2014 11:07:30 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ah
+24-06-2014 11:07:33 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: and then have to make sure they work?
+24-06-2014 11:07:36 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, yeah...
+24-06-2014 11:07:38 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: yeah
+24-06-2014 11:07:42 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: is there any way to delete?
+24-06-2014 11:07:45 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: i'd be happy to.
+24-06-2014 11:07:50 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: judge informal is your friend
+24-06-2014 11:07:53 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: uhhhh
+24-06-2014 11:07:53 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: i do!
+24-06-2014 11:07:56 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: it's pretty uglyu
+24-06-2014 11:08:00 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: but bgbnb1gben can tell you about the last time that happened
+24-06-2014 11:08:08 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: generally, just submit a stupid solution
+24-06-2014 11:08:10 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: and it worked on judge informal and it didn't when i submitted
+24-06-2014 11:08:11 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: that's what I do
+24-06-2014 11:08:15 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: unless I've actually solved it
+24-06-2014 11:08:19 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: k
+24-06-2014 11:08:22 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: like
+24-06-2014 11:08:37 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: still, it's cool
+24-06-2014 11:08:43 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: judge informal?
+24-06-2014 11:08:45 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I don't think it matters too much
+24-06-2014 11:08:49 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: google lets me down
+24-06-2014 11:09:15 > epochfail: gongy: tutor magic :P
+24-06-2014 11:09:31 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: what?
+24-06-2014 11:09:38 < * gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230 is v. confused
+24-06-2014 11:10:13 -!- Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com has joined #aioc
+24-06-2014 11:10:20 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: hello all
+24-06-2014 11:10:21 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: sos
+24-06-2014 11:10:22 > epochfail: gongy: judge informal is internal orac stuff
+24-06-2014 11:10:24 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: yeah i think that's a better idea; judge informal the official solution and then submit a stupid solution
+24-06-2014 11:10:26 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: my proxy died
+24-06-2014 11:10:28 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnb1gben, you're buddy is here
+24-06-2014 11:10:28 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Ed_code1: yeah
+24-06-2014 11:10:29 > epochfail: dahlukeh: PULL THE PROBEEEEEEEEEEEEESSSSSSSSSSSSSSSS
+24-06-2014 11:10:37 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: LOL :P
+24-06-2014 11:10:41 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: dahlukeh: is that photoshop!?!?!?!?!?!?!
+24-06-2014 11:10:49 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: how?!?!?!
+24-06-2014 11:10:50 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Ed_code1, ?
+24-06-2014 11:10:57 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: like, that is one of the eisiest
+24-06-2014 11:11:02 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: *a
+24-06-2014 11:11:13 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: do you  guys all work on laptops
+24-06-2014 11:11:17 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: how do your eyes survive
+24-06-2014 11:11:34 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: i usually don't
+24-06-2014 11:11:35 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: gongy: oh, the work I put in for info... :P
+24-06-2014 11:11:36 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: unless i'm out.
+24-06-2014 11:12:01 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, hmmmm, I think that works best. Of course, if you code a solution I think it's fair to submit it
+24-06-2014 11:12:05 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: (I do that :P)
+24-06-2014 11:12:17 < * Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com does a backflip 'cause, hey, yolo
+24-06-2014 11:12:21 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: (I purposely come up with new problems to increase my problem count :D)
+24-06-2014 11:12:24 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: but that involves solving it first :P
+24-06-2014 11:12:27 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: <Ed_code1> bgbnb1gben: I know this question is sortta dodgy, but do you know how many practice questions gp had done when he made it the the summer camp?
+24-06-2014 11:12:29 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Ed_code1, what about photoshop?
+24-06-2014 11:12:33 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: Ed_code1, no, no I do not, and it is entirely irrelevant.
+24-06-2014 11:12:37 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, haha, but it's fun!
+24-06-2014 11:12:41 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: it is
+24-06-2014 11:12:42 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: also it's almost 100% guarnateed that you won't be skipped through the alpha stream.
+24-06-2014 11:12:43 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: okay
+24-06-2014 11:12:49 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: but ishraq et al want it on orac asap!
+24-06-2014 11:12:51 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: :P
+24-06-2014 11:12:54 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: damn XD :P
+24-06-2014 11:12:55 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: and i can't solve it that fast! :)
+24-06-2014 11:12:55 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, too bad
+24-06-2014 11:12:56 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dahlukeh, if you wrote starter set #4
+24-06-2014 11:13:02 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: OH
+24-06-2014 11:13:02 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: well
+24-06-2014 11:13:06 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: whoever wrote it
+24-06-2014 11:13:07 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: this is the bit where i get to say
+24-06-2014 11:13:09 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, :(
+24-06-2014 11:13:10 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, hmmmmm?
+24-06-2014 11:13:14 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: "i'll do it when i get time"
+24-06-2014 11:13:15 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: solve it
+24-06-2014 11:13:19 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: and *then* put up the problem
+24-06-2014 11:13:23 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yeah!
+24-06-2014 11:13:24 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: i catch your drift
+24-06-2014 11:13:27 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: that's the tutor way
+24-06-2014 11:13:27 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: bgbnb1gben, just wondering how many I should have done
+24-06-2014 11:13:30 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: more mistakes than i can imagine
+24-06-2014 11:13:33 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i mean
+24-06-2014 11:13:35 > epochfail: dahlukeh: "oh it's zvz on frost! time for a macro ga.... oh."
+24-06-2014 11:13:36 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: "dimention"
+24-06-2014 11:13:38 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: seriously?
+24-06-2014 11:13:39 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: ishraq: the above policy will be in effect from now on ^
+24-06-2014 11:13:39 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: 'go solve all the other 5 problems you have on orac'
+24-06-2014 11:13:50 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, :(
+24-06-2014 11:13:56 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, if you give me a list I'll correct it
+24-06-2014 11:13:59 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ok
+24-06-2014 11:14:03 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i did one the other day xD
+24-06-2014 11:14:07 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: :(
+24-06-2014 11:14:13 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: also since you guys don't know me IRL
+24-06-2014 11:14:15 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: dahlukeh: gongy++
+24-06-2014 11:14:17 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: Ed_code1, as many as you can!
+24-06-2014 11:14:17 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, damn, next match
+24-06-2014 11:14:25 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: my name is gong- eee
+24-06-2014 11:14:30 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: bgbnb1gben: I totally didn't see that coming
+24-06-2014 11:14:31 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: not gonjy which sounds retarded
+24-06-2014 11:14:39 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: you see, I spend about 4 hours a day
+24-06-2014 11:14:40 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: kk
+24-06-2014 11:14:44 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ooo
+24-06-2014 11:14:46 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dahlukeh
+24-06-2014 11:14:51 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: and I have been told it's probs too much
+24-06-2014 11:14:52 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: can you stop with the
+24-06-2014 11:14:58 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: something.in
+24-06-2014 11:14:59 > epochfail: GUYS STOP SPAMMING ENTER WTF
+24-06-2014 11:15:04 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: so like idk how much I should actually be doing
+24-06-2014 11:15:04 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, hahahahaha :P
+24-06-2014 11:15:05 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: woops
+24-06-2014 11:15:10 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: epochfail: moderated? :P
+24-06-2014 11:15:24 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: +mv :P
+24-06-2014 11:15:39 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dalukeh is that a 'yes, sure' or a 'hahahahah nope im a troll'
+24-06-2014 11:15:40 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, sorry, I didn't realise you only had a limited supply of '\n'
+24-06-2014 11:15:46 > epochfail: i literally cannot read this conversation without it jumping a line a second, this is not necessary
+24-06-2014 11:16:02 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, so, it's actually pretty interesting
+24-06-2014 11:16:06 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: hmmm
+24-06-2014 11:16:12 > epochfail: dahlukeh: still better than that shitcurity student who skipped every 5th character in the report.
+24-06-2014 11:16:23 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: throughout orac, there's a mixture of somethingin.txt, something.in, and stdin
+24-06-2014 11:16:23 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: what is shitcurity?
+24-06-2014 11:16:28 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: yeah
+24-06-2014 11:16:33 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: its really annoying as fuk
+24-06-2014 11:16:33 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, hehe :P
+24-06-2014 11:16:36 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: for us on linux, we don't mind the file extension, and daresay .in/.out is even neater
+24-06-2014 11:16:37 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: hmmmm
+24-06-2014 11:16:42 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: well
+24-06-2014 11:16:49 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: for us on the noob os
+24-06-2014 11:16:57 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: whereby "neater" means "a little easier for whoever is putting the problem on orac" :P
+24-06-2014 11:17:08 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dahlukeh was using windows in the screenshot
+24-06-2014 11:17:41 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, hmmmm, I have it setup to be convient
+24-06-2014 11:17:45 > epochfail: gongy: file extensions don't matter, notepad can save as .in easily
+24-06-2014 11:17:54 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: Ed_code1, train as much as you want -- if you enjoy it, train for hours! if you fucking hate it, train for minutes if at all.
+24-06-2014 11:18:02 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: orac should be about you having fun solving hard problems
+24-06-2014 11:18:09 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i can't open .out and .in files with notepad
+24-06-2014 11:18:11 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: the fact that you're possibly getting to a camp should just be a bonus.
+24-06-2014 11:18:15 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: dahlukeh, orac
+24-06-2014 11:18:19 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: dahlukeh: oh, btw, should I be worried if I can't understand 99% of your backup code?
+24-06-2014 11:18:21 > epochfail: gongy: you can associate these extensions with notepad
+24-06-2014 11:18:37 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: and it opens fine?
+24-06-2014 11:18:44 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Ed_code1, no
+24-06-2014 11:18:48 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: it's linux hackery
+24-06-2014 11:18:54 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: also, if on windows, turning on "view file extensions" or something in explorer options is a useful tip
+24-06-2014 11:18:54 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I had to google for most of the functions
+24-06-2014 11:19:07 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, I would recommend using notepad++ instead of notepad
+24-06-2014 11:19:12 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: actually i think it's turning *off* "hide extensions for known types"
+24-06-2014 11:19:14 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: it's quite a bit better
+24-06-2014 11:19:32 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: what dahlukeh said. also, you can open .in/.out in codeblocks
+24-06-2014 11:19:40 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: I've already done that
+24-06-2014 11:19:44 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: but...
+24-06-2014 11:19:51 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: my antivirus seems to think it's dangerous
+24-06-2014 11:19:52 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: sure
+24-06-2014 11:20:07 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Every time i do a scan, it turns the feature off
+24-06-2014 11:20:17 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, what thing?
+24-06-2014 11:20:19 > epochfail: that's a shit av
+24-06-2014 11:20:28 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yeah... antivirus is pretty dogy
+24-06-2014 11:20:31 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I would turn it off
+24-06-2014 11:20:39 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: well
+24-06-2014 11:20:41 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: its just mbam
+24-06-2014 11:20:46 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: only just a scanner
+24-06-2014 11:21:00 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: they made it crap - it used to be better.
+24-06-2014 11:21:44 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: hmmmm
+24-06-2014 11:22:06 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: 'potentially unwanted modification'
+24-06-2014 11:22:08 -!- AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au has joined #aioc
+24-06-2014 11:22:16 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: turns out, i can disable its detection of that in the settings
+24-06-2014 11:22:23 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, anyway, just use notepad++
+24-06-2014 11:22:29 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ok dl'ing now
+24-06-2014 11:22:38 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: gongy: the last time my antivirus decided to do a scan without my prior permission, I hit the uninstall button without hesitation :P
+24-06-2014 11:22:41 -!- AntiForest!~AntiFores@14-200-12-13.static.tpgi.com.au has quit [Client Quit]
+24-06-2014 11:22:57 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: AntiForest is just like - immouta here
+24-06-2014 11:23:02 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: that was quick
+24-06-2014 11:23:04 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: :P
+24-06-2014 11:23:21 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dahlukeh: can you explain what notepad++ is for as a summary
+24-06-2014 11:23:27 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, it's basically notepad
+24-06-2014 11:23:30 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: like notepad
+24-06-2014 11:23:31 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: ++
+24-06-2014 11:23:33 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: :P
+24-06-2014 11:23:40 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: but, has syntax  highlighting, indentation, autocomplete
+24-06-2014 11:23:48 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: gongy: I find it's really bad
+24-06-2014 11:23:49 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: also multiple tabs
+24-06-2014 11:23:50 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: website looks like it replaces codeblocks?
+24-06-2014 11:23:54 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: and other nice things
+24-06-2014 11:24:00 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: not really
+24-06-2014 11:24:02 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: it doesn't compile
+24-06-2014 11:24:04 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ok
+24-06-2014 11:24:08 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: but other than that it's really good
+24-06-2014 11:24:08 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: ^
+24-06-2014 11:24:11 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: if you're like the rest of us and love terminals, I would happily vote for gvim/vim, and I'm sure #aioc will show you how to use it. :P
+24-06-2014 11:24:15 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: oh yeah
+24-06-2014 11:24:19 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: also there's a notepad++ portable that comes with a compiler.
+24-06-2014 11:24:20 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: im not on linux
+24-06-2014 11:24:22 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: yet
+24-06-2014 11:24:22 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: dahlukeh: I hate it :(
+24-06-2014 11:24:26 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: gongy, gvim can be installed on linux
+24-06-2014 11:24:28 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: err
+24-06-2014 11:24:29 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: windows
+24-06-2014 11:24:29 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Ed_code1, :(
+24-06-2014 11:24:30 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: fuck
+24-06-2014 11:24:36 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: there are ways
+24-06-2014 11:24:40 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: it's not as nice though
+24-06-2014 11:24:41 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i take it swearing is ok
+24-06-2014 11:24:48 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, yes
+24-06-2014 11:24:50 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: in limited quantities
+24-06-2014 11:24:53 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: gongy: if you're over 18 :P
+24-06-2014 11:24:56 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: uhhhhhh
+24-06-2014 11:24:59 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: bgbnb1gben: vim can be installed on windows, but requires cygwin to be !derp
+24-06-2014 11:25:00 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: "limited"
+24-06-2014 11:25:02 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: or an []
+24-06-2014 11:25:06 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: if you don't *COUGH* spawm it *COUGH*
+24-06-2014 11:25:09 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, I have it through git
+24-06-2014 11:25:09 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: if you're not mature enough to be on the internet and not be offended by swear words, I think #aioc is the least of your issues.
+24-06-2014 11:25:09 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: spam*
+24-06-2014 11:25:09 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: where [] is something "I wont say
+24-06-2014 11:25:18 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: 'case epochfail will get mad
+24-06-2014 11:25:23 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: wdym?
+24-06-2014 11:25:23 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: Junkbot, right, yeah, regular vim on windows is a mistake.
+24-06-2014 11:25:31 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: it starts with o and ends with p
+24-06-2014 11:25:32 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, I installed a git thingy
+24-06-2014 11:25:36 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: and is a two letter word
+24-06-2014 11:25:39 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: and it came with a cygwin like env
+24-06-2014 11:25:39 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: wtf
+24-06-2014 11:25:43 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: so I got vim through that
+24-06-2014 11:25:45 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: is all of this 
+24-06-2014 11:25:51 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: gongy: no :P
+24-06-2014 11:25:52 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: Ed_code1, so, you wanted to say "op". Instead, you generated 3 lines of extra cruft
+24-06-2014 11:26:01 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: ohh sweet
+24-06-2014 11:26:02 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: Ed_code1, can you see how that might be annoying?
+24-06-2014 11:26:03 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: linkme?
+24-06-2014 11:26:07 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: [for future reference]
+24-06-2014 11:26:09 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: bgbnb1gben: NO! MY COVER IS BROKEN!
+24-06-2014 11:26:09 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: and yes
+24-06-2014 11:26:13 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: sos:(
+24-06-2014 11:26:14 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: 'git 'cygwin' 'env'
+24-06-2014 11:26:23 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: Ed_code1, right. please, *please*, think about what you're saying before you type/say it.
+24-06-2014 11:26:24 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i need to learn
+24-06-2014 11:26:26 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: a lot
+24-06-2014 11:26:28 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, v
+24-06-2014 11:26:29 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: http://msysgit.github.io/
+24-06-2014 11:26:34 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: tys
+24-06-2014 11:26:36 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: I'm sick of being kind to you and saying "hey, this is really annoying, please don't!
+24-06-2014 11:26:37 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: "
+24-06-2014 11:26:43 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: it's not my job to be your mother.
+24-06-2014 11:26:44 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, env == environment
+24-06-2014 11:26:51 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: lol
+24-06-2014 11:26:54 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: o.o
+24-06-2014 11:26:57 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, do you use windows?
+24-06-2014 11:26:59 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: you just explained the one i knew
+24-06-2014 11:27:01 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: anyway, gotta go
+24-06-2014 11:27:02 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: thanks xD
+24-06-2014 11:27:04 < Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com: bye
+24-06-2014 11:27:05 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: not in general
+24-06-2014 11:27:12 -!- Ed_code1!~email@cpe-142-255-77-162.nyc.res.rr.com has quit []
+24-06-2014 11:27:13 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: bye!
+24-06-2014 11:27:14 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: oh.
+24-06-2014 11:27:14 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: but sounds like something useful to have for reference when i do
+24-06-2014 11:27:16 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: or that.
+24-06-2014 11:27:27 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, right. I mostly use vms now for git related stuff
+24-06-2014 11:27:34 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: although phais is fun to do in it
+24-06-2014 11:27:36 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: what's git
+24-06-2014 11:27:48 < espes__!~espes@205.185.120.132: bgbnb1gben: you totally frightened him away
+24-06-2014 11:27:55 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: AHAHAHAHA espes__ such lurk
+24-06-2014 11:27:57 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: when i ask questions
+24-06-2014 11:27:58 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: very timing
+24-06-2014 11:27:58 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: espes__, it has happened before.
+24-06-2014 11:27:58 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: wow
+24-06-2014 11:28:00 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: git's an 'version control system'
+24-06-2014 11:28:01 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: espes__, also dat lurk.
+24-06-2014 11:28:06 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: don't be angry and give me lmgtfy
+24-06-2014 11:28:15 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: assume i've googled and read as much as i can
+24-06-2014 11:28:15 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, :(
+24-06-2014 11:28:18 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I was aboutto
+24-06-2014 11:28:19 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: ok
+24-06-2014 11:28:32 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: basically, the idea is you have a lot of people working on the same project
+24-06-2014 11:28:47 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: and they work on different files, or even the same one
+24-06-2014 11:28:55 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: but in general, they make changes to different bits of the code
+24-06-2014 11:29:01 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: so its like google docs
+24-06-2014 11:29:03 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: but for code?
+24-06-2014 11:29:07 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: instead of having to spend a lot of time making sure that everyhting is merged properly
+24-06-2014 11:29:07 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: ^
+24-06-2014 11:29:09 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: it does it
+24-06-2014 11:29:10 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yeah
+24-06-2014 11:29:15 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: except like 1000x better
+24-06-2014 11:29:21 -!- panome!~panome@124-171-35-179.dyn.iinet.net.au has joined #aioc
+24-06-2014 11:29:23 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: it does a lot of things gdocs doesn't
+24-06-2014 11:29:28 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: and 1000x more linux compatible
+24-06-2014 11:29:35 < * gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230 sighs
+24-06-2014 11:29:49 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: so gdocs is managing a single file but "live"
+24-06-2014 11:30:09 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: git/svn and other version control systems let people, offline, manage parts of the same project
+24-06-2014 11:30:16 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ok
+24-06-2014 11:30:24 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: so if you have a massive function
+24-06-2014 11:30:27 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, yeah, it's mostly used in linu
+24-06-2014 11:30:32 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: one guy works on it
+24-06-2014 11:30:44 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dahlukeh: as far as i'm concerend, 3/4 of the stuff discussed here is linux
+24-06-2014 11:30:46 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: you could even be creating two "new" versions of the same file that might conflict with each other, and git merges changes and flags conflicts if they appear
+24-06-2014 11:30:56 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i thought i was cool when i started programming
+24-06-2014 11:30:56 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, hmmmm
+24-06-2014 11:31:02 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: neq minnit
+24-06-2014 11:31:09 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: join #aioc and suddenly ur a noob
+24-06-2014 11:31:09 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: *nek minnit
+24-06-2014 11:31:18 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: actually minnut
+24-06-2014 11:31:20 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: neque mynnytt
+24-06-2014 11:31:21 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: since you have to be a kiwi while saying it
+24-06-2014 11:31:23 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, yah, but the idea is to get better
+24-06-2014 11:31:25 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: lol
+24-06-2014 11:31:39 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dahlukeh: get better? i mean know more tech stuff
+24-06-2014 11:31:42 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: everyone was once a noob; just keep on improving and you will be pretty good in no time
+24-06-2014 11:31:42 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: not programming xD
+24-06-2014 11:31:43 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: gongy, we're all pretty terrible at what we do. we just have varying levels of terrible ;)
+24-06-2014 11:31:54 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: there's always more to lern.
+24-06-2014 11:31:55 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: by noob i just mean understanding all these things
+24-06-2014 11:31:56 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: like spelling
+24-06-2014 11:31:59 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: I should learn how to spell learn.
+24-06-2014 11:32:12 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dahlukeh should learn to spell check
+24-06-2014 11:32:13 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: xD
+24-06-2014 11:32:14 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: jk
+24-06-2014 11:32:28 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, yup. The only way to understand more is to constantly learn
+24-06-2014 11:32:56 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: we've given up on daslexich knowing how to spell :P
+24-06-2014 11:33:23 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: because you guys are so smart and know everything, sometimes i can't learn the stuff you guys talk about beacuse i don't know the stuff i need to know to learn it
+24-06-2014 11:33:43 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: right
+24-06-2014 11:33:46 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I was once the same way
+24-06-2014 11:33:58 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I guess just ask; most of the time we will happily tell you stuff
+24-06-2014 11:34:01 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: or even just google
+24-06-2014 11:34:06 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: google first. :P
+24-06-2014 11:34:08 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: yeah usually i try google
+24-06-2014 11:34:12 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: and when the oppotunity comes, learn to use the thing
+24-06-2014 11:34:17 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: as much as "there's no such thing as a stupid question", if it's the third link on google it's a stupid question.
+24-06-2014 11:34:19 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: like i said before, i always google
+24-06-2014 11:34:33 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: I only ask if I can't understand at all... it appears like
+24-06-2014 11:34:41 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: I don't google, but I'm just not on ur level xD
+24-06-2014 11:34:53 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: :''(
+24-06-2014 11:35:15 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: I hope you mean you do google. :Po
+24-06-2014 11:35:22 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yeah
+24-06-2014 11:35:24 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: googling and not understanding is useful
+24-06-2014 11:35:26 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: because, you'll ask here.
+24-06-2014 11:35:32 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: and all of a sudden you'll realise what the google words mean
+24-06-2014 11:35:32 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnb1gben, while googling is good, I think asking is ok
+24-06-2014 11:35:44 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: so next time you google something and see the same words and know what that maps to
+24-06-2014 11:35:45 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: like, some things are obviously better googlable
+24-06-2014 11:35:54 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: but things like 'what does vim do' is pretty easy to be answered
+24-06-2014 11:36:00 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: and will be a lot more accessable
+24-06-2014 11:36:08 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: right, but learning when to do what is, well, an art that people should learn too.
+24-06-2014 11:36:14 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yeah, definitely
+24-06-2014 11:37:05 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: there's nothing more annoying than being in the middle of something and then being asked "how do I use the printf function" when the answer can be answered by man printf. :p
+24-06-2014 11:37:12 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: haha
+24-06-2014 11:37:27 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: when i asked about vim, i was kinda asking about how you use it - so do you use a terminal to launch it and you use it in a terminal
+24-06-2014 11:37:34 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: or its lik a program
+24-06-2014 11:37:48 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: so it's a terminal thing
+24-06-2014 11:37:58 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: vim is a terminal thing, gvim is graphical vim, so comes with its own window/program
+24-06-2014 11:39:01 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ok
+24-06-2014 11:39:06 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: thanks
+24-06-2014 11:39:21 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: as if I can't fucking 100% fashion statement
+24-06-2014 11:39:27 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ffs
+24-06-2014 11:41:32 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: bgbnb1gben: i accidentally gvim'd something the other day
+24-06-2014 11:41:42 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: and it used my vimrc
+24-06-2014 11:41:44 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: and i was impressed
+24-06-2014 11:41:53 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: i don't remember exactly what, because i don't believe i have gvim on my comp
+24-06-2014 11:42:10 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: in summary, gvim is like Office, and vim is what real men use
+24-06-2014 11:42:14 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: specifically, i was impressed that most of the stuff from my vimrc was legit
+24-06-2014 11:42:28 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Does this vim operate in a nice language
+24-06-2014 11:42:30 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: like latex
+24-06-2014 11:42:39 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: iirc david greenaway used to use gvim, at least when he gave the "what your momma never told you about cpu caches" lecture at apr10
+24-06-2014 11:42:43 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: "operate in a nice language"?
+24-06-2014 11:42:47 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: what are you trying to ask with that?
+24-06-2014 11:42:49 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: vim is language-agnostic.
+24-06-2014 11:42:51 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: it's a text editor
+24-06-2014 11:42:53 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: like, say, notepad.
+24-06-2014 11:42:58 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: unlike notepad, it's pretty customisable.
+24-06-2014 11:43:04 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: and isn't shit.
+24-06-2014 11:43:08 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: oh right
+24-06-2014 11:43:37 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Can we leave it at - Word but less user friendly but more customisable?
+24-06-2014 11:43:41 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnb1gben, :( notepad++ isn't shit
+24-06-2014 11:43:58 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: gongy, so word gives you shiny buttons to click.
+24-06-2014 11:44:01 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: vim.... not so much.
+24-06-2014 11:44:06 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: bgbnb1gben: gvim does
+24-06-2014 11:44:16 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: it's a completely different style of editor; word lets you italicise and underline and bold and etc.
+24-06-2014 11:44:20 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: vim lets you write letters.
+24-06-2014 11:44:22 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: that's it.
+24-06-2014 11:44:23 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: so say you wanted seomthing to be bold
+24-06-2014 11:44:25 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: oh
+24-06-2014 11:44:29 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: it's so much closer to notepad than word.
+24-06-2014 11:44:43 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: all you can do is type letters, but you can do it pretty damn effectively.
+24-06-2014 11:44:59 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: what is the biggest specific advantage? can you explain 'damn effectively' pls?
+24-06-2014 11:45:16 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, it basically gives you quick commands for doing a fuckton of things
+24-06-2014 11:45:19 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: to give you an idea, i think >= 50% of people on #aioc [not wanting to ping them], will identify themselves as using vim [i think]
+24-06-2014 11:45:30 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: like deleting lines, copying, pasting, jumping around, autocompleting
+24-06-2014 11:45:35 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: gongy, I can search and replace an entire file in one command.
+24-06-2014 11:45:44 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: I can collapse code between matching {} or () or []
+24-06-2014 11:45:47 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: delete it
+24-06-2014 11:45:49 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: and then paste it somewhere else
+24-06-2014 11:45:51 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: using, uhhh
+24-06-2014 11:45:58 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: 6? keystrokes.
+24-06-2014 11:46:07 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: + less than 5 to navigate to the new place.
+24-06-2014 11:46:20 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: wow ok
+24-06-2014 11:46:22 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: I think it's 6 -- zc dd :<line> pp
+24-06-2014 11:46:28 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: probably just one p.
+24-06-2014 11:46:29 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: are you more efficient
+24-06-2014 11:46:33 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: bgbnb1gben: just one p :P
+24-06-2014 11:46:39 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: yeah that. :p
+24-06-2014 11:46:46 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: so it would take me 7 because I'd have to undo :p
+24-06-2014 11:46:57 -!- panome!~panome@124-171-35-179.dyn.iinet.net.au has quit [Ping timeout: 252 seconds]
+24-06-2014 11:47:09 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ahhh too many options
+24-06-2014 11:47:15 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: for installation of notepad++
+24-06-2014 11:47:46 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: doo you guys use vim on linux or windows
+24-06-2014 11:48:07 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: gongy, vim's designed to be customisable and veeery minimal. it doesn't come with features that you otherwise have to click buttons for, and that's where it gets its power from
+24-06-2014 11:48:20 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: I use vim on linux because linux in a vm
+24-06-2014 11:48:27 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: gvim is perfectly installable on windows though.
+24-06-2014 11:49:17 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ok im not gonna put up with not having linux
+24-06-2014 11:49:20 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: YESYESYESYSEYSE
+24-06-2014 11:49:22 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: YES
+24-06-2014 11:49:24 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: YESYESYSE
+24-06-2014 11:49:26 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: lol
+24-06-2014 11:49:29 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: definitely consider gvimming
+24-06-2014 11:49:32 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: #aioc: we have successfully infiltrated the finals
+24-06-2014 11:49:35 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: wow you guys are alive?
+24-06-2014 11:49:39 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: SpiritsUnite and the lurkers come out to play
+24-06-2014 11:49:46 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: :D
+24-06-2014 11:49:49 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: gongy, virtualbox. :P
+24-06-2014 11:49:50 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: ARE RESULTS OUT?
+24-06-2014 11:49:54 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: YES!
+24-06-2014 11:49:54 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: yes!
+24-06-2014 11:49:58 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: what is this
+24-06-2014 11:49:58 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: YESYESYESYES
+24-06-2014 11:50:01 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: guess who's first again lol
+24-06-2014 11:50:03 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: And normo win by alphabet!
+24-06-2014 11:50:07 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: HOORAY
+24-06-2014 11:50:15 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: S < W
+24-06-2014 11:50:16 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: icedingo 6
+24-06-2014 11:50:18 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gah
+24-06-2014 11:50:21 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: Grundo_: ishraq ^
+24-06-2014 11:50:27 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: owait
+24-06-2014 11:50:32 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: hold on, is kevin on #aioc
+24-06-2014 11:50:34 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: where's adgold
+24-06-2014 11:50:41 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: kevin as in from dec13
+24-06-2014 11:50:49 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: kevintran?
+24-06-2014 11:50:49 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: SpiritsUnite: ^ ?
+24-06-2014 11:50:52 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: no
+24-06-2014 11:50:52 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: or kevin ni?
+24-06-2014 11:50:57 < ishraq!~ishraq@d220-237-45-131.mas801.nsw.optusnet.com.au: sweet
+24-06-2014 11:51:01 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: DpEpsilon, links?
+24-06-2014 11:51:05 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: lets see
+24-06-2014 11:51:11 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: hold on, I'll open my desktop browser
+24-06-2014 11:51:11 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: oh is this on cf
+24-06-2014 11:51:23 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gongy: no, unsw progcomp
+24-06-2014 11:51:49 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: congrats DpEpsilon AbyssMall dxsmiley, AntiForest ishraq Grundo_, AdGold et al, SpiritsUnite et al, matts et al, kevin ni et al, panome et al
+24-06-2014 11:52:02 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: damn, beat me to it
+24-06-2014 11:52:11 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: it was harder since half of them aren't online
+24-06-2014 11:52:18 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: wait what is this
+24-06-2014 11:52:23 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: heh, yeah
+24-06-2014 11:52:25 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: congrats DpEpsilon AbyssMall dxsmiley, AntiForest ishraq Grundo_, AdGold et al, SpiritsUnite et al, matts et al, kevin ni et al, panome et al
+24-06-2014 11:52:25 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: we used javascript and c++ as welll
+24-06-2014 11:52:29 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: s/DpEpsilon//
+24-06-2014 11:52:42 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: I can't congratulate myself
+24-06-2014 11:52:47 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: and they only put us as python
+24-06-2014 11:52:54 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: SpiritsUnite: heh
+24-06-2014 11:52:59 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: lol just looking at the results
+24-06-2014 11:53:05 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: James Ruse x100
+24-06-2014 11:53:11 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: SpiritsUnite: what happened to your DP?
+24-06-2014 11:53:20 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: oh i printed stuff out wrong
+24-06-2014 11:53:28 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: my dp was fine
+24-06-2014 11:53:31 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: OH NICE, our year 10 team did better than our other senior teams
+24-06-2014 11:53:40 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: ahahaha DpEpsilon nice team name
+24-06-2014 11:53:50 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: it was AbyssMaul's fault
+24-06-2014 11:53:52 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Junkbot: did you go to ruse
+24-06-2014 11:54:00 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: SpiritsUnite: eh didn't change the rankings :)
+24-06-2014 11:54:04 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: yup
+24-06-2014 11:54:24 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: you go to ruse, he goes to ruse, EVERYBODY GOES TO RUSE
+24-06-2014 11:54:28 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: SpiritsUnite dayum, dat reserve finalists
+24-06-2014 11:54:31 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: used lua
+24-06-2014 11:54:33 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: *lua*
+24-06-2014 11:54:37 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: exclusively
+24-06-2014 11:54:40 < espes__!~espes@205.185.120.132: hey
+24-06-2014 11:54:43 < espes__!~espes@205.185.120.132: luas pretty cool
+24-06-2014 11:54:49 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: espes__: i didn't disagree
+24-06-2014 11:55:00 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: lol language: ?
+24-06-2014 11:55:04 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: actually i don't know anything about lua
+24-06-2014 11:55:13 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: often used as an extension language
+24-06-2014 11:55:15 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: mostly for games
+24-06-2014 11:55:15 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: but i still didn't disagree :P
+24-06-2014 11:55:19 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: ah yes
+24-06-2014 11:55:20 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: lol
+24-06-2014 11:55:24 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: roblox uses lua
+24-06-2014 11:55:31 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: i do recall a certain jrpc student who asked to learn it
+24-06-2014 11:56:05 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: man, i have a lua book somewhere around my house
+24-06-2014 11:56:07 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: i'm not sure why
+24-06-2014 11:56:10 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: bug me for the stories next time
+24-06-2014 11:56:13 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: heh, yeah, not surprised, we've had at least one
+24-06-2014 11:56:16 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: :D
+24-06-2014 11:56:22 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: i've probably told them already
+24-06-2014 11:56:23 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: oh wait
+24-06-2014 11:56:25 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: eh
+24-06-2014 11:56:25 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: DpEpsilon: is your name supposed to be read dr epsilon
+24-06-2014 11:56:30 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gongy: nop
+24-06-2014 11:56:33 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: no more camp story times
+24-06-2014 11:56:37 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: because no more camps
+24-06-2014 11:56:38 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: ;_;
+24-06-2014 11:56:38 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: :C:C:C
+24-06-2014 11:56:51 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gongy: I get that a lot, surprisingly
+24-06-2014 11:56:53 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: whatevs, next time we have a #aioc gathering
+24-06-2014 11:56:57 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: HAHAHAHAHA
+24-06-2014 11:56:57 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: s/sur/unsur/
+24-06-2014 11:56:59 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: https://cgi.cse.unsw.edu.au/~progcomp/2014/home/prov.php
+24-06-2014 11:57:06 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: that's soooooooo good
+24-06-2014 11:57:11 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: yeah. hopefully compclub is a thing?
+24-06-2014 11:57:13 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: good work guys/girls :D
+24-06-2014 11:57:17 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: haven't heard back from mr_perfect recently
+24-06-2014 11:57:33 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: wait, sydney boys
+24-06-2014 11:57:36 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: who's in that one?
+24-06-2014 11:57:37 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: DpEpsilon: he was there last wednesday
+24-06-2014 11:57:38 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: i probably won't show since it's timetable dependant
+24-06-2014 11:57:45 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: SpiritsUnite: oh that's right
+24-06-2014 11:57:53 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: ah :C
+24-06-2014 11:58:04 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: eh, whenever
+24-06-2014 11:58:13 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: what I *meant* was, we haven't heard a definitive answer as to whether it's occurring from mr_perfect yet
+24-06-2014 11:58:17 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: yeah :P
+24-06-2014 11:58:25 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: dahlukeh: kevin
+24-06-2014 11:58:26 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: who is WJMZBMR
+24-06-2014 11:58:30 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: dahlukeh: ni
+24-06-2014 11:58:40 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gongy: AntiForest, Grundo_ and ishraq 
+24-06-2014 11:58:46 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: oh its a team?
+24-06-2014 11:58:46 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: i.e. russsss
+24-06-2014 11:58:47 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: wow
+24-06-2014 11:58:48 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: oh right
+24-06-2014 11:58:50 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: well
+24-06-2014 11:58:54 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gongy: named after a guy
+24-06-2014 11:58:55 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: do you mean WJMZBMR the teamname or the username
+24-06-2014 11:59:06 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: team
+24-06-2014 11:59:17 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: the guy is from china and has a large accolade of programming achievements [for one, 1st in IOI 2013]
+24-06-2014 11:59:23 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: wow
+24-06-2014 11:59:26 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: w0t
+24-06-2014 11:59:55 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: um among this excitement
+24-06-2014 12:00:01 < auscompgeek!aucg@firefox/community/auscompgeek: Junkbot: Kevin Ni isn't in fork_bomb, sorry. :)
+24-06-2014 12:00:06 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: wat
+24-06-2014 12:00:07 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: auscompgeek: are you?
+24-06-2014 12:00:11 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: owait
+24-06-2014 12:00:15 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: auscompgeek: are you hs or uni
+24-06-2014 12:00:16 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: i keep forgetting
+24-06-2014 12:00:20 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: auscompgeek: he's hs
+24-06-2014 12:00:24 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: can someone halp with fashion statement
+24-06-2014 12:00:24 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: y12
+24-06-2014 12:00:29 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: I don't get why i'm getting stuff wrong
+24-06-2014 12:00:32 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: we need sarah's aioc thing again lol
+24-06-2014 12:00:33 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: DpEpsilon: ah, but doing hs1917, right?
+24-06-2014 12:00:35 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: yep
+24-06-2014 12:00:42 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: SpiritsUnite: yup
+24-06-2014 12:00:46 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: auscompgeek: sorry for taking away your question
+24-06-2014 12:00:50 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: sure
+24-06-2014 12:00:55 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: codepad code?
+24-06-2014 12:01:04 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: SpiritsUnite: yes
+24-06-2014 12:01:08 < auscompgeek!aucg@firefox/community/auscompgeek: DpEpsilon: it's ok, I was still reading my scrollback anyway
+24-06-2014 12:01:17 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: http://codepad.org/D8byZGyW
+24-06-2014 12:01:26 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: auscompgeek: who's in fork_bomb?
+24-06-2014 12:01:26 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: sarahb: sarahcat: that thing is down, right?
+24-06-2014 12:01:35 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: also dat #aioc DP domination
+24-06-2014 12:01:45 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: 19 19 19 17 19 19 
+24-06-2014 12:01:48 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: other scores are like
+24-06-2014 12:01:51 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: Junkbot: :D
+24-06-2014 12:01:51 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: 3 2 3 1 . . . 
+24-06-2014 12:01:52 -!- gnustomp!gnustomp@unaffiliated/gnustomp has joined #aioc
+24-06-2014 12:02:01 < auscompgeek!aucg@firefox/community/auscompgeek: Junkbot: forkbomb, gnustomp, some other person
+24-06-2014 12:02:06 < auscompgeek!aucg@firefox/community/auscompgeek: ohai gnustomp
+24-06-2014 12:02:07 -!- olsamsons!~olsamsons@110-175-1-178.static.tpgi.com.au has quit [Quit: Leaving.]
+24-06-2014 12:02:11 < gnustomp!gnustomp@unaffiliated/gnustomp: hi
+24-06-2014 12:02:20 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: auscompgeek: i'm not familiar with any of those people
+24-06-2014 12:02:31 < auscompgeek!aucg@firefox/community/auscompgeek: Junkbot: I'm not surprised
+24-06-2014 12:02:37 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gnustomp: who is your some other person?
+24-06-2014 12:02:43 < gnustomp!gnustomp@unaffiliated/gnustomp: not on IRC
+24-06-2014 12:02:48 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: where's AdGold
+24-06-2014 12:02:51 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: time to book your flights
+24-06-2014 12:02:52 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: :)
+24-06-2014 12:02:54 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gnustomp: name?
+24-06-2014 12:03:04 < gnustomp!gnustomp@unaffiliated/gnustomp: Julian
+24-06-2014 12:03:25 < auscompgeek!aucg@firefox/community/auscompgeek: oh wow, Steph (orion) was just one point behind my team
+24-06-2014 12:03:28 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: mmk, I don't know any Julians still in high school that would be coding
+24-06-2014 12:03:48 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: auscompgeek: huh, what?
+24-06-2014 12:04:07 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: what result do you get?
+24-06-2014 12:04:12 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: auscompgeek: sorry, which is your school again?
+24-06-2014 12:04:13 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: 60%
+24-06-2014 12:04:14 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: [when you submit]
+24-06-2014 12:04:17 < auscompgeek!aucg@firefox/community/auscompgeek: DpEpsilon: Steph from HS1917/NCSS 2014 is the Anonymous team, afaik
+24-06-2014 12:04:18 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: I keep thinking you're penrith
+24-06-2014 12:04:20 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: It really shouldn't be
+24-06-2014 12:04:21 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: incorrects, timeouts, crashes?
+24-06-2014 12:04:23 < auscompgeek!aucg@firefox/community/auscompgeek: DpEpsilon: Greystanes :P
+24-06-2014 12:04:25 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: incorrrect
+24-06-2014 12:04:34 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: auscompgeek: yeah, sorry :P
+24-06-2014 12:04:42 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: and yeah, wasn't at NCSS 2014
+24-06-2014 12:05:09 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: so, looking at those results
+24-06-2014 12:05:16 < auscompgeek!aucg@firefox/community/auscompgeek: yeah, I know. can't be a returner twice, eh? :P
+24-06-2014 12:05:17 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: the take home message is to use C++
+24-06-2014 12:05:36 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: auscompgeek: yeah :C
+24-06-2014 12:05:37 < auscompgeek!aucg@firefox/community/auscompgeek: "Britz Basic" wtf even
+24-06-2014 12:05:56 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: now I have a two year gap between camps, assuming I can come back to tute
+24-06-2014 12:06:00 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: s/tute/tutor/
+24-06-2014 12:06:23 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: auscompgeek: also, please go to sleep at some point, OK? :)
+24-06-2014 12:06:31 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: just saying, it'll be good for your exam
+24-06-2014 12:06:47 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: yes ^
+24-06-2014 12:06:55 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: auscompgeek, what exam?
+24-06-2014 12:06:56 < auscompgeek!aucg@firefox/community/auscompgeek: DpEpsilon: what is sleep </sarcasm>
+24-06-2014 12:06:57 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: what's the exam?
+24-06-2014 12:06:59 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: AI?
+24-06-2014 12:07:03 < auscompgeek!aucg@firefox/community/auscompgeek: 1917
+24-06-2014 12:07:07 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: pffffffft
+24-06-2014 12:07:07 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: hahahahahaha
+24-06-2014 12:07:08 < gnustomp!gnustomp@unaffiliated/gnustomp: lol
+24-06-2014 12:07:12 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: :P
+24-06-2014 12:07:12 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I mean
+24-06-2014 12:07:17 < bgbnb1gben!~ben@c58-109-74-233.randw4.nsw.optusnet.com.au: I like how that was both our reaction :p
+24-06-2014 12:07:20 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Hmmmm, Hmmmm, I certainly agree
+24-06-2014 12:07:31 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: hey, I didn't finish my exam
+24-06-2014 12:07:34 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: That will be most certainly a extreamly difficult exam
+24-06-2014 12:07:44 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: only because there was a retarded question, but the principle still applies
+24-06-2014 12:07:50 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: s/retarded/convoluted/
+24-06-2014 12:07:56 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: it'll be hard if you can't spell the answer correctly
+24-06-2014 12:08:28 < auscompgeek!aucg@firefox/community/auscompgeek: either way, I get to go to school for all my classes first
+24-06-2014 12:08:36 < gnustomp!gnustomp@unaffiliated/gnustomp: how do the (no code) people actually get marks?
+24-06-2014 12:08:39 < auscompgeek!aucg@firefox/community/auscompgeek: I was worried I'd miss out on ext2 maths
+24-06-2014 12:08:54 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: pffffft
+24-06-2014 12:09:12 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gnustomp, no code == english
+24-06-2014 12:09:28 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Junkbot: any thoughts?
+24-06-2014 12:09:29 < gnustomp!gnustomp@unaffiliated/gnustomp: so just based on theory and sympathy?
+24-06-2014 12:09:33 < auscompgeek!aucg@firefox/community/auscompgeek: SpiritsUnite: hey, I have an ext2 exam on Thursday, don't "pffft" me
+24-06-2014 12:09:33 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: bgbnb1gben, kennyboy epochfail swagger.... really?
+24-06-2014 12:09:35 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gnustomp: thinking
+24-06-2014 12:09:38 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gah
+24-06-2014 12:09:40 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: thinking
+24-06-2014 12:09:42 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: auscompgeek: i had mine last wednesday
+24-06-2014 12:10:10 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: and it was trials
+24-06-2014 12:10:19 < auscompgeek!aucg@firefox/community/auscompgeek: SpiritsUnite: if I told you I also have a 2u maths exam on thursday, you'd scoff
+24-06-2014 12:10:25 < auscompgeek!aucg@firefox/community/auscompgeek: why do you guys have trials so early?
+24-06-2014 12:10:31 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: you still have to do 2u?
+24-06-2014 12:10:32 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: no idea
+24-06-2014 12:10:55 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: one sec
+24-06-2014 12:10:58 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: there's probably a reason somewhere, but i don't really know it
+24-06-2014 12:11:01 < gnustomp!gnustomp@unaffiliated/gnustomp: SpiritsUnite: weird schools like SBHS and schools that don't have a high uptake of 4u still do 2u in 4u
+24-06-2014 12:11:12 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: OH
+24-06-2014 12:11:19 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: read the problem statement
+24-06-2014 12:11:21 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: really carefully
+24-06-2014 12:11:22 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: again.
+24-06-2014 12:11:35 < auscompgeek!aucg@firefox/community/auscompgeek: yeah, there's only 5 people doing 4u at my school
+24-06-2014 12:11:44 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: gnustomp: no, we had to do 2u for our last two, but not this one
+24-06-2014 12:11:54 < gnustomp!gnustomp@unaffiliated/gnustomp: even though we have like 120 doing 4u, we still do 2u
+24-06-2014 12:11:54 < gnustomp!gnustomp@unaffiliated/gnustomp: idk
+24-06-2014 12:12:07 < SpiritsUnite!~spiritsu@unaffiliated/spiritsunite: maybe a higher chance of people dropping i guess
+24-06-2014 12:12:24 < gnustomp!gnustomp@unaffiliated/gnustomp: not that i'm doing these courses yet
+24-06-2014 12:12:34 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Junkbot: HOLY MOTHER OF GOD
+24-06-2014 12:12:41 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gnustomp: what's your yearly enrollment?
+24-06-2014 12:12:42 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: XD
+24-06-2014 12:12:42 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Junkbot: I EVEN CHECKED
+24-06-2014 12:12:50 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i even checked the note values were right
+24-06-2014 12:12:53 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: i was so convinced it was right, too
+24-06-2014 12:12:54 < gnustomp!gnustomp@unaffiliated/gnustomp: DpEpsilon: uh, you mean what year i'm in? 10.
+24-06-2014 12:13:04 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: it's dahlukeh's fault for trolling
+24-06-2014 12:13:06 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gnustomp: no, how many people in a year group
+24-06-2014 12:13:10 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, TROLLING
+24-06-2014 12:13:13 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: WHAT DID I DOOOOOOOOOOO?
+24-06-2014 12:13:14 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: sorry not dahlukeh
+24-06-2014 12:13:16 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: xD
+24-06-2014 12:13:20 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, :O
+24-06-2014 12:13:21 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: I thought you wrtoe the problem
+24-06-2014 12:13:28 < gnustomp!gnustomp@unaffiliated/gnustomp: DpEpsilon: 180 intake y7, extra ~30 in y9, total ~210 y9 onwards
+24-06-2014 12:13:32 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Well this problem uses 100, 20, 5, and 1 dollar notes
+24-06-2014 12:13:35 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, >:D
+24-06-2014 12:13:46 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: no country in the world
+24-06-2014 12:13:47 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: gnustomp: ok, so 120 makes sense, I suppose
+24-06-2014 12:13:52 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: uses such a stupid system
+24-06-2014 12:13:55 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: not even the us
+24-06-2014 12:13:58 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: still a significant percentage compared to us :P
+24-06-2014 12:14:04 < gnustomp!gnustomp@unaffiliated/gnustomp: yeah, well...
+24-06-2014 12:14:08 < gnustomp!gnustomp@unaffiliated/gnustomp: yeah.
+24-06-2014 12:14:09 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, :(
+24-06-2014 12:14:12 < jesse!~jesse@unaffiliated/jesse: i thought SBHS policy was to let as many kids do 4u at their own accord
+24-06-2014 12:14:12 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: fairly sure dahlukeh didn't write that one
+24-06-2014 12:14:15 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, don't bash my money system
+24-06-2014 12:14:18 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: he would've been in yr9 or smth
+24-06-2014 12:14:22 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: yeah sorry about that
+24-06-2014 12:14:25 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, hey bro, I've written all problems ever
+24-06-2014 12:14:31 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: bro
+24-06-2014 12:14:35 < gnustomp!gnustomp@unaffiliated/gnustomp: it's max 120 though
+24-06-2014 12:14:37 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, bro
+24-06-2014 12:14:43 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: all except fashion statement, duh?
+24-06-2014 12:14:51 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i literally said one word - typo - and bgbnbigben was like
+24-06-2014 12:14:53 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: dahlukeh
+24-06-2014 12:14:56 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: I WROTE THAT...
+24-06-2014 12:15:08 < dahlukeh!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: yah
+24-06-2014 12:15:11 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: dahlukeh: or maybe it was invasion you didn't write.
+24-06-2014 12:15:12 < jesse!~jesse@unaffiliated/jesse: gnustomp: still quite a lot
+24-06-2014 12:15:13 -!- dahlukeh is now known as daslexich
+24-06-2014 12:15:19 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: lol@invasion
+24-06-2014 12:15:19 < gnustomp!gnustomp@unaffiliated/gnustomp: it is
+24-06-2014 12:15:20 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: daslexich: i must be getting mixed up
+24-06-2014 12:15:22 < daslexich!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: Junkbot, definitely not invasion
+24-06-2014 12:15:29 < daslexich!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: that just... appeared
+24-06-2014 12:15:30 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: what makes you hate it so much
+24-06-2014 12:15:38 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: other than the fact its dup'ed
+24-06-2014 12:15:55 < daslexich!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: gongy, 'other than the fact'.... "OTHER THAN THE FACT"
+24-06-2014 12:16:08 < daslexich!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: what "OTHER" is there?
+24-06-2014 12:16:09 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: ah
+24-06-2014 12:16:19 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: heheheheheheh
+24-06-2014 12:16:35 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: it seems the comp1917 tutors are having trouble finding time to mark portfoilos
+24-06-2014 12:16:40 -!- epochbot!~epochbot@epochfail.com has joined #aioc
+24-06-2014 12:16:40 -!- mode/#aioc [+o epochfail] by ChanServ!ChanServ@services.
+24-06-2014 12:16:41 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: s/foil/foli/
+24-06-2014 12:16:42 -!- mode/#aioc [+o epochbot] by epochfail!~epochfail@ec2-54-252-117-26.ap-southeast-2.compute.amazonaws.com
+24-06-2014 12:16:44 < daslexich!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: OH SHIT
+24-06-2014 12:16:46 -!- mode/#aioc [-o epochbot] by epochfail!~epochfail@ec2-54-252-117-26.ap-southeast-2.compute.amazonaws.com
+24-06-2014 12:16:49 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: WOAHWAT
+24-06-2014 12:16:51 > epochfail: ...errr
+24-06-2014 12:16:52 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: well goodnight guys
+24-06-2014 12:16:53 -!- mode/#aioc [+o epochbot] by epochfail!~epochfail@ec2-54-252-117-26.ap-southeast-2.compute.amazonaws.com
+24-06-2014 12:16:55 -!- mode/#aioc [-o epochfail] by epochfail!~epochfail@ec2-54-252-117-26.ap-southeast-2.compute.amazonaws.com
+24-06-2014 12:16:56 < daslexich!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: WTF
+24-06-2014 12:16:59 < Junkbot!~Junkbotub@124-168-47-66.dyn.iinet.net.au: gongy: night
+24-06-2014 12:17:06 < daslexich!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: WTF IS EPOCHBOT
+24-06-2014 12:17:08 > epochfail: >:C
+24-06-2014 12:17:12 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Junkbot: ill probably install linux on vbox tomorrow. 
+24-06-2014 12:17:14 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: auto op
+24-06-2014 12:17:16 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: ?
+24-06-2014 12:17:19 < daslexich!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochbot, hey?
+24-06-2014 12:17:24 > epochfail: daslexich: clearly not the product of my studies
+24-06-2014 12:17:27 < DpEpsilon!DpEpsilon@unaffiliated/dpepsilon: epochbot: what is your function
+24-06-2014 12:17:29 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: Junkbot: you said you would help ;P
+24-06-2014 12:17:30 < daslexich!~dahlukeh@ec2-54-79-49-4.ap-southeast-2.compute.amazonaws.com: epochfail, clearly not
+24-06-2014 12:17:33 > epochfail: daslexich: it will moderate edcode's newlines
+24-06-2014 12:17:38 < gongy!dcef61e6@gateway/web/freenode/ip.220.239.97.230: i feel like i'm using too much of your time
