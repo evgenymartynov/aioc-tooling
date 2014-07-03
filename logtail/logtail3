@@ -9,7 +9,7 @@ class Msg(object):
   def __init__(self, timestamp, sender, text, action, server):
     self.timestamp = timestamp
     self.sender = sender
-    self.text = text.decode('utf-8')
+    self.text = text.decode('utf-8', 'ignore')
     self.action = action
     self.server = server
 
