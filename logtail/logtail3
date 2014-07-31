@@ -81,7 +81,7 @@ def escape_html(ss):
 
 def wrap_links(ss):
   for s in ss:
-    s.text = re.sub(r'(http.?://[^ ]*)', r'<a href="\1">[link]</a>', s.text)
+    s.text = re.sub(r'(http.?://[^ "]*)', r'<a href="\1">[link]</a>', s.text)
 
 
 def detect_addressing(ss):
