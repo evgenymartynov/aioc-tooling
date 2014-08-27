@@ -58,7 +58,10 @@ def split_lines(ss):
       sender, s = s.split(' ', 1)
     elif s.startswith('< '):
       s = s[2:]
-      sender, s = s.split(' ', 1)
+      if ' ' not in s:
+        sender, s = 'fuck_you_edcode!~fuckyou@edcode', 'you broke my fucking logtail'
+      else:
+        sender, s = s.split(' ', 1)
 
     if '!' in sender:
       sender = sender[:sender.find('!')]
@@ -88,7 +91,7 @@ def detect_addressing(ss):
   for s in ss:
     if '#aioc' in s.text and not s.server:
       s.text = '<b>' + s.text + '</b>'
-    elif re.search(r'(.{2,4})\1\1', s.text):
+    elif re.search(r'([a-z]{2,4})\1\1', s.text):
       s.text = '<b>' + s.text + '</b>'
 
 
