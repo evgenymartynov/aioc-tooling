@@ -95,6 +95,11 @@ def detect_addressing(ss):
       s.text = '<b>' + s.text + '</b>'
 
 
+def full_kappa(ss):
+  for s in ss:
+    s.text = re.sub(r'\b[Kk]appa\b', r'<img src="/kappa.png">', s.text)
+
+
 def printout(ss):
   def nickhash(nick):
     h = sum(map(ord, nick))
@@ -124,4 +129,5 @@ ss = split_lines(ss)
 escape_html(ss)
 wrap_links(ss)
 detect_addressing(ss)
+full_kappa(ss)
 printout(ss)
