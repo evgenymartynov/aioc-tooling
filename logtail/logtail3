@@ -29,6 +29,16 @@ def get_lines():
     lines = map(str.strip, lines)
   return lines
 
+def get_topic():
+  with open(sys.argv[1]) as f:
+    lines = f.readlines()
+    lines = map(str.strip, lines)
+
+  for s in reversed(lines):
+    s = s[20:]
+    if s.startswith('-!- Topic for '):
+      return s[21:]
+  return ""
 
 def split_lines(ss):
   res = []
@@ -100,14 +110,14 @@ def full_kappa(ss):
     s.text = re.sub(r'\b[Kk]appa\b', r'<img src="/kappa.png">', s.text)
 
 
-def printout(ss):
+def printout(ss, topic):
   def nickhash(nick):
     h = sum(map(ord, nick))
     h %= len(COLOURS)
     return h
 
   print >> TARGET, PROLOGUE
-
+  print >> TARGET, '<p><span class="topic-header">Latest topic: </span><span class="topic">%s</span></p>' % cgi.escape(topic).encode('ascii', 'xmlcharrefreplace')
   for s in ss:
     if s.action:
       fmt = '<span class="timestamp">%s</span> <span class="action">* %s %s</span>'
@@ -126,8 +136,9 @@ def printout(ss):
 
 ss = get_lines()
 ss = split_lines(ss)
+topic = get_topic()
 escape_html(ss)
 wrap_links(ss)
 detect_addressing(ss)
 full_kappa(ss)
-printout(ss)
+printout(ss, topic)
