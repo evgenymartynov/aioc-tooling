@@ -117,7 +117,10 @@ def printout(ss, topic):
     return h
 
   print >> TARGET, PROLOGUE
-  print >> TARGET, '<p><span class="topic-header">Latest topic: </span><span class="topic">%s</span></p>' % cgi.escape(topic).encode('ascii', 'xmlcharrefreplace')
+  print >> TARGET, ('<p><span class="topic-header">' + '&nbsp;' * 7 + 'Latest topic</span> ' +
+      '<span class="topic">%s</span>' +
+      '</p>') % cgi.escape(topic).encode('ascii', 'xmlcharrefreplace')
+
   for s in ss:
     if s.action:
       fmt = '<span class="timestamp">%s</span> <span class="action">* %s %s</span>'

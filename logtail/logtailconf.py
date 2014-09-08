@@ -41,13 +41,11 @@ PROLOGUE = '''\
 
     .topic-header {
         color: #000;
-        font-size: medium;
         font-weight: bold;
     }
 
     .topic {
         color: #44a;
-        font-size: medium;
     }
   </style>
 </head>
