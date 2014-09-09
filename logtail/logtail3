@@ -34,11 +34,15 @@ def get_topic():
     lines = f.readlines()
     lines = map(str.strip, lines)
 
+  topic = ""
   for s in reversed(lines):
     s = s[20:]
     if s.startswith('-!- Topic for '):
-      return s[21:]
-  return ""
+      topic = s[21:]
+      break
+  topic = escape_html(topic)
+  topic = wrap_links(topic)
+  return topic
 
 def split_lines(ss):
   res = []
@@ -87,14 +91,22 @@ def split_lines(ss):
   return res
 
 
-def escape_html(ss):
-  for s in ss:
-    s.text = cgi.escape(s.text).encode('ascii', 'xmlcharrefreplace')
+def escape_html(text):
+  return cgi.escape(text).encode('ascii', 'xmlcharrefreplace')
 
 
-def wrap_links(ss):
+def escape_html_list(ss):
   for s in ss:
-    s.text = re.sub(r'(http.?://[^ "]*)', r'<a href="\1">[link]</a>', s.text)
+    s.text = escape_html(s.text)
+
+
+def wrap_links(text):
+  return re.sub(r'(http.?://[^ "]*)', r'<a href="\1">[link]</a>', text)
+
+
+def wrap_links_list(ss):
+  for s in ss:
+    s.text = wrap_links(s.text)
 
 
 def detect_addressing(ss):
@@ -119,7 +131,7 @@ def printout(ss, topic):
   print >> TARGET, PROLOGUE
   print >> TARGET, ('<p><span class="topic-header">' + '&nbsp;' * 7 + 'Latest topic</span> ' +
       '<span class="topic">%s</span>' +
-      '</p>') % cgi.escape(topic).encode('ascii', 'xmlcharrefreplace')
+      '</p>') % topic
 
   for s in ss:
     if s.action:
@@ -140,8 +152,8 @@ def printout(ss, topic):
 ss = get_lines()
 ss = split_lines(ss)
 topic = get_topic()
-escape_html(ss)
-wrap_links(ss)
+escape_html_list(ss)
+wrap_links_list(ss)
 detect_addressing(ss)
 full_kappa(ss)
 printout(ss, topic)
