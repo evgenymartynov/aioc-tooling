@@ -34,11 +34,16 @@ def get_topic():
     lines = f.readlines()
     lines = map(str.strip, lines)
 
+  topic = ""
   for s in reversed(lines):
     s = s[20:]
     if s.startswith('-!- Topic for '):
-      return s[21:]
-  return ""
+      topic = s[21:]
+      break
+  # TODO: Make these function calls
+  topic = cgi.escape(topic).encode('ascii', 'xmlcharrefreplace')
+  topic = re.sub(r'(http.?://[^ "]*)', r'<a href="\1">[link]</a>', topic)
+  return topic
 
 def split_lines(ss):
   res = []
@@ -119,7 +124,7 @@ def printout(ss, topic):
   print >> TARGET, PROLOGUE
   print >> TARGET, ('<p><span class="topic-header">' + '&nbsp;' * 7 + 'Latest topic</span> ' +
       '<span class="topic">%s</span>' +
-      '</p>') % cgi.escape(topic).encode('ascii', 'xmlcharrefreplace')
+      '</p>') % topic
 
   for s in ss:
     if s.action:
