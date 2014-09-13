@@ -73,7 +73,7 @@ def split_lines(ss):
     elif s.startswith('< '):
       s = s[2:]
       if ' ' not in s:
-        sender, s = 'fuck_you_edcode!~fuckyou@edcode', 'you broke my fucking logtail'
+        sender, s = s, 'I am a teapot: fat and retarded'
       else:
         sender, s = s.split(' ', 1)
 
