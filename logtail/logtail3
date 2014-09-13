@@ -114,8 +114,11 @@ def detect_addressing(ss):
   for s in ss:
     if '#aioc' in s.text and not s.server:
       s.text = '<b>' + s.text + '</b>'
-    elif re.search(r'([a-z]{2,4})\1\1', s.text):
-      s.text = '<b>' + s.text + '</b>'
+    else:
+      m = re.search(r'([a-z]{2,4}?)\1\1', s.text)
+      # Drop things like "hahaha" and "looooool"
+      if m and all(bad not in m.groups() for bad in ['ha', 'ah', 'oo']):
+        s.text = '<b>' + s.text + '</b>'
 
 
 def full_kappa(ss):
