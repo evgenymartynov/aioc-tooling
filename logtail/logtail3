@@ -5,6 +5,9 @@ from logtailconf import *
 
 TARGET = None
 
+STR_TOPIC_JOIN = '-!- Topic for #aioc: '
+STR_TOPIC_CHANGED = '-!- ChanServ!ChanServ@services. changed topic of #aioc to: '
+
 class Msg(object):
   def __init__(self, timestamp, sender, text, action, server):
     self.timestamp = timestamp
@@ -37,11 +40,16 @@ def get_topic():
   topic = ""
   for s in reversed(lines):
     s = s[20:]
-    if s.startswith('-!- Topic for '):
-      topic = s[21:]
+    if s.startswith(STR_TOPIC_JOIN):
+      topic = s[len(STR_TOPIC_JOIN):]
       break
+    elif s.startswith(STR_TOPIC_CHANGED):
+      topic = s[len(STR_TOPIC_CHANGED):]
+      break
+
   topic = escape_html(topic)
   topic = wrap_links(topic)
+
   return topic
 
 def split_lines(ss):
