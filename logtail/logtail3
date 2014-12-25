@@ -132,6 +132,7 @@ def detect_addressing(ss):
 def full_kappa(ss):
   for s in ss:
     s.text = re.sub(r'\b[Kk]appa\b', r'<img src="/kappa.png">', s.text)
+    s.text = re.sub(r'\bwow\b', r'<img src="/doge.gif">', s.text, re.I)
 
 
 def printout(ss, topic):
