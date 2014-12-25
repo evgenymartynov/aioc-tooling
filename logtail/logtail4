@@ -175,7 +175,8 @@ topic = get_topic(lines)
 ss = message_pipeline(lines[-num:])  # But only parse last few lines
 
 # Generate and atomically move
-__temp_fd, temp = tempfile.mkstemp(suffix='.log', prefix='logtail', dir='/tmp')
+temp_fd, temp = tempfile.mkstemp(suffix='.log', prefix='logtail', dir='/tmp')
+os.fchmod(temp_fd, 0644)
 generate_file(topic, ss, temp)
 file_replace_atomic(file_out, temp)
 
