@@ -51,7 +51,7 @@ PROLOGUE = '''\
 </head>
 <body>
 <p class="links-top">
-  [ <a href="aioc">small</a> | <a href="aioc-large">large</a> ]
+  [ <a href="aioc">small</a> | <a href="aioc-large">large</a> | Find/want something? <a href="https://github.com/evgenymartynov/aioc-tooling">Contribute</a> ]
 </p>'''
 
 EPILOGUE = '</body></html>'
