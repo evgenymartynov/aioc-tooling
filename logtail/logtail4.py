@@ -148,7 +148,7 @@ def generate_file(topic, ss, filename):
 
   print >> f, PROLOGUE
   print >> f, ('<p><span class="topic-header">' + '&nbsp;' * 7 + 'Latest topic</span> ' +
-      '<span class="topic">%s</span>' +
+      '<span class="topic" id="topic">%s</span>' +
       '</p>') % topic
 
   for s in ss:

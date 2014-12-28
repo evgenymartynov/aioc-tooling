@@ -17,6 +17,9 @@ COLOURS = [
 PROLOGUE = '''\
 <html>
 <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
   <style>
     body {
         font-family: monospace, Monospace, 'Courier New';
@@ -52,6 +55,19 @@ PROLOGUE = '''\
 <body>
 <p class="links-top">
   [ <a href="aioc">small</a> | <a href="aioc-large">large</a> | Find/want something? <a href="https://github.com/evgenymartynov/aioc-tooling">Contribute</a> ]
-</p>'''
+</p>
 
-EPILOGUE = '</body></html>'
+<div id="messages">'''
+
+EPILOGUE = '''
+</div>
+<script>
+  var namespace = '/socket.io/chat';
+  var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
+
+  socket.on('message', function (msg) {
+    $('#topic').html(msg.topic);
+    $('#messages').append(msg.msg);
+  });
+</script>
+</body></html>'''
