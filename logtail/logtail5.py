@@ -17,6 +17,13 @@ socketio = SocketIO(app)
 def main_view():
   return open(STATIC_FILE).read()
 
+@app.route('/kappa.png')
+def kappa_img():
+  return open('kappa.png').read()
+
+@app.route('/doge.gif')
+def doge_img():
+  return open('doge.gif').read()
 
 @socketio.on('connect', namespace=NS)
 def ws_connect():

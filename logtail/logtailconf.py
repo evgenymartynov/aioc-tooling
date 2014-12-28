@@ -61,6 +61,7 @@ PROLOGUE = '''\
 
 EPILOGUE = '''
 </div>
+<div id="fuckWebDev"></div>
 <script>
   var namespace = '/socket.io/chat';
   var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
@@ -68,7 +69,7 @@ EPILOGUE = '''
   socket.on('message', function (msg) {
     $('#topic').html(msg.topic);
     $('#messages').append(msg.msg);
-    $('#messages').animate({ scrollTop: $('#messages').height()}, 1000);
+    $('html, body').animate({ scrollTop: $('#fuckWebDev').offset().top}, 1000);
   });
 </script>
 </body></html>'''
