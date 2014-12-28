@@ -31,7 +31,7 @@ def msg_callback(topic, msg):
 
 
 @app.before_first_request
-def init_db():
+def init():
   global STATIC_FILE
   STATIC_FILE = sys.argv[2]
 
@@ -42,14 +42,5 @@ def init_db():
   t.daemon = True
   t.start()
 
-#  def fuckyou():
-#    import time
-#    while 1:
-#      socketio.emit('message', 'test', namespace=NS)
-#      time.sleep(1)
-#  t = threading.Thread(target=fuckyou)
-#  t.start()
 
-
-app.debug = True
-socketio.run(app, port=8080)
+socketio.run(app, port=8080, host='0.0.0.0')

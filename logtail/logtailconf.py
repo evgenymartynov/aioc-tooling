@@ -68,6 +68,7 @@ EPILOGUE = '''
   socket.on('message', function (msg) {
     $('#topic').html(msg.topic);
     $('#messages').append(msg.msg);
+    $('#messages').animate({ scrollTop: $('#messages').height()}, 1000);
   });
 </script>
 </body></html>'''
