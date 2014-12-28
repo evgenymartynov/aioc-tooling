@@ -14,6 +14,25 @@ class Msg(object):
     self.action = action
     self.server = server
 
+  def html(self):
+    def nickhash(nick):
+      h = sum(map(ord, nick))
+      h %= len(COLOURS)
+      return h
+
+    if self.action:
+      fmt = '<span class="timestamp">%s</span> <span class="action">* %s %s</span>'
+    elif self.server:
+      fmt = '<span class="timestamp">%s</span> <span class="server">!! %s %s</span>'
+    else:
+      colour = COLOURS[nickhash(self.sender)]
+      fmt = '<span class="timestamp">%s</span> <span class="nick" style="color: {colour}">&lt;%s&gt;</span> %s'
+      fmt = fmt.format(colour=colour)
+
+    fmt += '<br>'
+
+    return fmt % (self.timestamp, self.sender, self.text)
+
   def __str__(self):
     return str((self.timestamp, self.sender, self.text))
 
@@ -125,11 +144,6 @@ def full_kappa(ss):
 
 
 def generate_file(topic, ss, filename):
-  def nickhash(nick):
-    h = sum(map(ord, nick))
-    h %= len(COLOURS)
-    return h
-
   f = open(filename, 'w')
 
   print >> f, PROLOGUE
@@ -138,17 +152,7 @@ def generate_file(topic, ss, filename):
       '</p>') % topic
 
   for s in ss:
-    if s.action:
-      fmt = '<span class="timestamp">%s</span> <span class="action">* %s %s</span>'
-    elif s.server:
-      fmt = '<span class="timestamp">%s</span> <span class="server">!! %s %s</span>'
-    else:
-      colour = COLOURS[nickhash(s.sender)]
-      fmt = '<span class="timestamp">%s</span> <span class="nick" style="color: {colour}">&lt;%s&gt;</span> %s'
-      fmt = fmt.format(colour=colour)
-
-    fmt += '<br>'
-    print >> f, fmt % (s.timestamp, s.sender, s.text)
+    print >> f, s.html()
 
   print >> f, EPILOGUE
 
@@ -166,44 +170,50 @@ def message_pipeline(ss):
   return ss
 
 
-# Unpack arguments
-file_in, file_out, num = sys.argv[1:]
-num = int(num)
+def main(file_in, file_out, num, msg_callback=None):
+  # Parse
+  lines = get_lines(file_in, 0)  # Keep all lines in memory
+  topic = get_topic(lines)
+  ss = message_pipeline(lines[-num:])  # But only parse last few lines
 
-# Parse
-lines = get_lines(file_in, 0)  # Keep all lines in memory
-topic = get_topic(lines)
-ss = message_pipeline(lines[-num:])  # But only parse last few lines
-
-# Generate and atomically move
-temp_fd, temp = tempfile.mkstemp(suffix='.log', prefix='logtail', dir='/tmp')
-os.fchmod(temp_fd, 0644)
-generate_file(topic, ss, temp)
-file_replace_atomic(file_out, temp)
-
-
-# Open up the infile (race here, but fuck it)
-# TODO rework by removing get_lines() function
-# Spin waiting for new lines
-fd = os.open(file_in, os.O_RDONLY)
-os.lseek(fd, 0, os.SEEK_END)
-
-
-# Spin waiting for new lines
-part = ''
-while True:
-  part += os.read(fd, 9001)
-  if not part or '\n' not in part:
-    time.sleep(1)
-    continue
-
-  # Cool, got some shit. Run it through the same pipeline.
-  lines = part.split('\n')
-  lines, part = lines[:-1], lines[-1]
-
-  topic = get_topic(lines) or topic
-  ss += message_pipeline(lines)
-  ss = ss[-num:]
-
+  # Generate and atomically move
+  temp_fd, temp = tempfile.mkstemp(suffix='.log', prefix='logtail', dir='/tmp')
+  os.fchmod(temp_fd, 0644)
   generate_file(topic, ss, temp)
   file_replace_atomic(file_out, temp)
+
+
+  # Open up the infile (race here, but fuck it)
+  # TODO rework by removing get_lines() function
+  # Spin waiting for new lines
+  fd = os.open(file_in, os.O_RDONLY)
+  os.lseek(fd, 0, os.SEEK_END)
+
+
+  # Spin waiting for new lines
+  part = ''
+  while True:
+    part += os.read(fd, 9001)
+    if not part or '\n' not in part:
+      time.sleep(1)
+      continue
+
+    # Cool, got some shit. Run it through the same pipeline.
+    lines = part.split('\n')
+    lines, part = lines[:-1], lines[-1]
+
+    topic = get_topic(lines) or topic
+    new_data = message_pipeline(lines)
+    ss += new_data
+    ss = ss[-num:]
+
+    generate_file(topic, ss, temp)
+    file_replace_atomic(file_out, temp)
+
+    if msg_callback is not None:
+      for datum in new_data:
+        msg_callback(topic, datum.html())
+
+
+if __name__ == '__main__':
+  main(sys.argv[1], sys.argv[2], int(sys.argv[3]))
