@@ -118,7 +118,14 @@ def escape_html_list(ss):
 
 def wrap_links(text):
   # Technically parens are allowed, but not on *our* Internet >:C
-  return re.sub(r'(http.?://[^ "()]*)', r'<a href="\1">[link]</a>', text)
+  things = re.split(r'(https?://[^ "()]*)', text)
+  fragments = []
+  for i,s in enumerate(things):
+    if i % 2 == 0:
+      fragments.append(s)
+    else:
+      fragments.append('<a href="' + s + '">[link]</a>')
+  return ''.join(fragments)
 
 
 def wrap_links_list(ss):
