@@ -63,13 +63,15 @@ EPILOGUE = '''
 </div>
 <div id="fuckWebDev"></div>
 <script>
-  var namespace = '/socket.io/chat';
-  var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
+  if (location.port == 8080) {
+    var namespace = '/socket.io/chat';
+    var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
 
-  socket.on('message', function (msg) {
-    $('#topic').html(msg.topic);
-    $('#messages').append(msg.msg);
-    $('html, body').animate({ scrollTop: $('#fuckWebDev').offset().top}, 1000);
-  });
+    socket.on('message', function (msg) {
+      $('#topic').html(msg.topic);
+      $('#messages').append(msg.msg);
+      $('html, body').animate({ scrollTop: $('#fuckWebDev').offset().top}, 1000);
+    });
+  }
 </script>
 </body></html>'''
