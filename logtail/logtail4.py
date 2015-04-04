@@ -140,7 +140,9 @@ def detect_addressing(ss):
 def full_kappa(ss):
   for s in ss:
     s.text = re.sub(r'\b[Kk]appa\b', r'<img src="/kappa.png">', s.text)
+    s.text = re.sub(r'\blambda\b', r'<img style="transform: scaleY(-1)" src="/kappa.png">', s.text)
     s.text = re.sub(r'\bwow\b', r'<img src="/doge.gif">', s.text, re.I)
+    s.text = re.sub(r'\+1\b', r'<img src="/plus-1.png">', s.text, re.I)
 
 
 def generate_file(topic, ss, filename):
