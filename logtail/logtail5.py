@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import sys
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template
 from flask.ext.socketio import SocketIO
 
 import logtail4 as Logtail
@@ -24,6 +24,10 @@ def kappa_img():
 @app.route('/doge.gif')
 def doge_img():
   return open('doge.gif').read()
+
+@app.route('/<path:path>')
+def catch_all(path):
+  return redirect('http://epochfail.com/' + path)
 
 @socketio.on('connect', namespace=NS)
 def ws_connect():
