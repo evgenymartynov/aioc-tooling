@@ -55,6 +55,7 @@ def get_topic(lines):
   else:
     return None  # No topic
 
+  topic = topic.decode('utf-8', 'ignore')
   topic = escape_html(topic)
   topic = wrap_links(topic)
 
@@ -108,7 +109,10 @@ def split_lines(ss):
 
 
 def escape_html(text):
-  return cgi.escape(text).encode('ascii', 'xmlcharrefreplace')
+  try:
+    return cgi.escape(text).encode('ascii', 'xmlcharrefreplace')
+  except UnicodeDecodeError:
+    return 'fuck a duck, unicode broke'
 
 
 def escape_html_list(ss):
