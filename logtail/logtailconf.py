@@ -22,7 +22,7 @@ PROLOGUE = '''\
 
   <style>
     body {
-        font-family: monospace, Monospace, 'Courier New';
+        font-family: 'Comic Sans MS', monospace, Monospace, 'Courier New';
         font-size: smaller;
     }
 

@@ -1,10 +1,38 @@
 #!/usr/bin/python2
 
 import cgi, os, re, sys, tempfile, time
+import itertools
 from logtailconf import *
 
 STR_TOPIC_JOIN = '-!- Topic for #aioc: '
 STR_TOPIC_CHANGED = '-!- ChanServ!ChanServ@services. changed topic of #aioc to: '
+
+
+def identity_mutator(match):
+  return match
+
+def const_mutator(result):
+  def _(match):
+    return result
+  return _
+
+def link_mutator(match):
+  return '<a href="' + match + '">[link]</a>'
+
+mutators = [
+  (r'https?://[^ "()]*',   link_mutator),
+  (r'\bkappa\b',           const_mutator('<img src="/kappa.png">')),
+  (r'\blambda\b',          const_mutator('<img src="/kappa.png" style="transform: scaleY(-1)">')),
+  (r'\bwow\b',             const_mutator('<img src="/doge.gif">')),
+  (r'\+1\b',               const_mutator('<img src="/plus-1.png">')),
+  (r'\b(?:top)?kek\b',     const_mutator('<img src="/topkek.png">')),
+]
+
+global_matcher = '|'.join('(' + pattern + ')' for pattern, _ in mutators)
+global_matcher = re.compile(global_matcher, re.I)
+mutators = [mutator for _, mutator in mutators]
+mutators.insert(0, identity_mutator)
+
 
 class Msg(object):
   def __init__(self, timestamp, sender, text, action, server):
@@ -57,7 +85,7 @@ def get_topic(lines):
 
   topic = topic.decode('utf-8', 'ignore')
   topic = escape_html(topic)
-  topic = wrap_links(topic)
+  topic = execute_mutators(topic)
 
   return topic
 
@@ -120,21 +148,18 @@ def escape_html_list(ss):
     s.text = escape_html(s.text)
 
 
-def wrap_links(text):
-  # Technically parens are allowed, but not on *our* Internet >:C
-  things = re.split(r'(https?://[^ "()]*)', text)
+def execute_mutators(text):
   fragments = []
-  for i,s in enumerate(things):
-    if i % 2 == 0:
-      fragments.append(s)
-    else:
-      fragments.append('<a href="' + s + '">[link]</a>')
+  for fragment, mutator in itertools.izip(global_matcher.split(text),
+                                          itertools.cycle(mutators)):
+    if fragment is not None:
+      fragments.append(mutator(fragment))
   return ''.join(fragments)
 
 
-def wrap_links_list(ss):
+def execute_mutators_list(ss):
   for s in ss:
-    s.text = wrap_links(s.text)
+    s.text = execute_mutators(s.text)
 
 
 def detect_addressing(ss):
@@ -146,14 +171,6 @@ def detect_addressing(ss):
       # Drop things like "hahaha" and "looooool"
       if m and all(bad not in m.groups() for bad in ['ha', 'ah', 'oo']):
         s.text = '<b>' + s.text + '</b>'
-
-
-def full_kappa(ss):
-  for s in ss:
-    s.text = re.sub(r'\b[Kk]appa\b', r'<img src="/kappa.png">', s.text)
-    s.text = re.sub(r'\blambda\b', r'<img style="transform: scaleY(-1)" src="/kappa.png">', s.text)
-    s.text = re.sub(r'\bwow\b', r'<img src="/doge.gif">', s.text, re.I)
-    s.text = re.sub(r'\+1\b', r'<img src="/plus-1.png">', s.text, re.I)
 
 
 def generate_file(topic, ss, filename):
@@ -177,9 +194,8 @@ def file_replace_atomic(file_to, file_from):
 def message_pipeline(ss):
   ss = split_lines(ss)
   escape_html_list(ss)
-  wrap_links_list(ss)
+  execute_mutators_list(ss)
   detect_addressing(ss)
-  full_kappa(ss)
   return ss
 
 
